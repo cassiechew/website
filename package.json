@@ -1,24 +1,44 @@
 {
-  "name": "my-app",
+  "name": "website",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:css": "postcss styles/tailwind.css -o styles/main.css",
+    "build:watch": "postcss styles/tailwind.css -o styles/main.css --watch"
   },
   "dependencies": {
+    "@types/animejs": "^3.1.4",
+    "animejs": "^3.2.1",
+    "hack": "^0.8.1",
     "next": "11.1.0",
+    "postcss-cli": "^8.3.1",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
+    "@next/eslint-plugin-next": "^11.1.0",
     "@types/node": "^16.6.1",
     "@types/react": "17.0.17",
-    "eslint": "7.32.0",
-    "eslint-config-next": "11.1.0",
-    "prettier": "2.3.2",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
+    "autoprefixer": "latest",
+    "eslint": ">=7.20.0",
+    "eslint-config-next": "^11.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-xo": "latest",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "latest",
+    "eslint-plugin-react-hooks": "4",
+    "postcss": "latest",
+    "prettier": "^2.3.2",
+    "tailwindcss": "latest",
     "typescript": "4.3.5"
-  }
+  },
+  "packageManager": "yarn@3.0.1-rc.2"
 }
