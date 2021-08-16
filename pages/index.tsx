@@ -46,7 +46,6 @@ const Home: NextPage = () => {
 							</ul>
 						</div>
 						<br />
-						
 					</div>
 					{/* Uncomment for spicy boxes */}
 					{/* <div className="flex flex-row-reverse justify-center items-center">
