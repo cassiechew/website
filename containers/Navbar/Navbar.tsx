@@ -9,7 +9,7 @@ declare type Props = {
 }
 
 export const Navbar = (props : Props) : JSX.Element => (
-    <div>
+    <div className="container flex flex-col justify-center">
         <Bar />
         <div id={props.id} className="
             container

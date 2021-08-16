@@ -3,7 +3,7 @@ module.exports = {
   async redirects() {
     return [
       { source: '/github', destination: 'https://github.com/ryanchew3', permanent: true },
-      { source: '/blog', destination: 'https://cassie.id', permanent: true },
+      { source: '/blog', destination: 'https://blog.cassie.id', permanent: true },
     ]
   },
   reactStrictMode: true,

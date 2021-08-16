@@ -7,7 +7,7 @@ import Navbar from '../containers/Navbar';
 import Footer from '../containers/Footer';
 
 const Resume: NextPage = () => (
-	<div className="container flex flex-col justify-center align-middle ov">
+	<div className="container flex flex-col justify-center min-h-screen bg-gray-900 text-gray-300">
 		<Header />
 		<Navbar id="navbar" />
 		<br />
@@ -80,7 +80,7 @@ const Resume: NextPage = () => (
 			</div>
 			<Footer />
 		</main>
-		<Bar />
+
 	</div>
 );
 

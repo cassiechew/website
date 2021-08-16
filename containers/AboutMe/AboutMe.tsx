@@ -6,7 +6,8 @@ import Polygon from '../../components/Polygon';
 
 export const AboutMe = () : JSX.Element => {
     useEffect(() => {
-		animate('about');
+        // Too slow
+		// animate('about');
 	}, []);
 
     return(
