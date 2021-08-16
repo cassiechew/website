@@ -35,8 +35,8 @@ const Home: NextPage = () => {
 						</div>
 					</div> */}
 
-					<div className="flex flex-col justify-center max-w-screen-lg">
-						<div className="flex justify-center max-w-screen-lg">
+					<div className="flex flex-col justify-center">
+						<div className="flex justify-center">
 							<AboutMe />
 						</div>
 						<br />

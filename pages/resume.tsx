@@ -11,7 +11,7 @@ const Resume: NextPage = () => (
 		<Navbar id="navbar" />
 		<br />
 		<main className="flex flex-col justify-center items-center">
-			<div className="flex flex-col justify-center max-w-screen-lg">
+			<div className="flex flex-col justify-center">
 				<h1>ø Cassie Chew ø</h1>
                     -.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 				<br />
