@@ -8,7 +8,7 @@ const Github: NextPage = () => {
 	const router = useRouter();
 
 	useEffect(() => {
-		router.reload(window.location.pathname);
+		router.reload();
 	});
 
 	return (
