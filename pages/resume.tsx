@@ -1,7 +1,6 @@
 import type {NextPage} from 'next';
 
 import Header from '../components/Header';
-import Bar from '../components/Bar';
 
 import Navbar from '../containers/Navbar';
 import Footer from '../containers/Footer';

@@ -2,7 +2,6 @@
 
 import type {NextPage} from 'next';
 
-import Bar from '../components/Bar';
 import Header from '../components/Header';
 import To from '../components/To';
 
