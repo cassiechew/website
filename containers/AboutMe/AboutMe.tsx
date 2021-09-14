@@ -37,7 +37,7 @@ export const AboutMe = () : JSX.Element => {
                 <p id="proglang">・TypeScript, JavaScript, NodeJs, GraphQL, Go, C</p>
                 <p id="frames">・React, NextJS, ExpressJS, Apollo, TailwindCSS, ChakraUI</p>
                 <p id="db">・MongoDB, PostgreSQL, MySQL</p>
-                <p id="tools">urql, TypeORM, type-graphql, pg</p>
+                <p id="tools">・urql, TypeORM, type-graphql, pg</p>
                 <br />
                 <br />
             </div>
