@@ -38,7 +38,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@next/eslint-plugin-next", "npm:11.1.0"],
             ["@types/animejs", "npm:3.1.4"],
             ["@types/node", "npm:16.6.1"],
-            ["@types/react", "npm:17.0.17"],
+            ["@types/react", "npm:17.0.20"],
             ["@typescript-eslint/eslint-plugin", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:4.29.1"],
             ["@typescript-eslint/parser", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:4.29.1"],
             ["animejs", "npm:3.2.1"],
@@ -295,7 +295,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@next/react-dev-overlay", "virtual:2c181da561a25ff6c45bb0187a99e7fe4a00e3628b7388ba4287a9611108afa7003a8c7dbc1112273c16ef6c961d0fd04ea28bf0cd055c88d0b1645b8300143d#npm:11.1.0"],
             ["@babel/code-frame", "npm:7.12.11"],
-            ["@types/react", "npm:17.0.17"],
+            ["@types/react", "npm:17.0.20"],
             ["@types/react-dom", null],
             ["anser", "npm:1.4.9"],
             ["chalk", "npm:4.0.0"],
@@ -461,10 +461,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/react", [
-        ["npm:17.0.17", {
-          "packageLocation": "./.yarn/cache/@types-react-npm-17.0.17-5a7488a71f-3f2ae9ab6f.zip/node_modules/@types/react/",
+        ["npm:17.0.20", {
+          "packageLocation": "./.yarn/cache/@types-react-npm-17.0.20-a4aaee9f4d-e342bfaa4f.zip/node_modules/@types/react/",
           "packageDependencies": [
-            ["@types/react", "npm:17.0.17"],
+            ["@types/react", "npm:17.0.20"],
             ["@types/prop-types", "npm:15.7.4"],
             ["@types/scheduler", "npm:0.16.2"],
             ["csstype", "npm:3.0.8"]
@@ -4363,7 +4363,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@node-rs/helper", "npm:1.2.1"],
             ["@types/fibers", null],
             ["@types/node-sass", null],
-            ["@types/react", "npm:17.0.17"],
+            ["@types/react", "npm:17.0.20"],
             ["@types/react-dom", null],
             ["@types/sass", null],
             ["assert", "npm:2.0.0"],
@@ -5454,7 +5454,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/react-dom-virtual-9936f4c88d/0/cache/react-dom-npm-17.0.2-f551215af1-1c1eaa3bca.zip/node_modules/react-dom/",
           "packageDependencies": [
             ["react-dom", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:17.0.2"],
-            ["@types/react", "npm:17.0.17"],
+            ["@types/react", "npm:17.0.20"],
             ["loose-envify", "npm:1.4.0"],
             ["object-assign", "npm:4.1.1"],
             ["react", "npm:17.0.2"],
@@ -6262,7 +6262,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["styled-jsx", "virtual:2c181da561a25ff6c45bb0187a99e7fe4a00e3628b7388ba4287a9611108afa7003a8c7dbc1112273c16ef6c961d0fd04ea28bf0cd055c88d0b1645b8300143d#npm:4.0.0"],
             ["@babel/plugin-syntax-jsx", "virtual:5f84da650b96e52a946506d2fca3d33d4a5f91aceddc13686442aa5d077773d49fbe4247d8ffb9f7c44b24dcf7448c744a6c77caadc0aae0b87e5b54b367e378#npm:7.14.5"],
             ["@babel/types", "npm:7.15.0"],
-            ["@types/react", "npm:17.0.17"],
+            ["@types/react", "npm:17.0.20"],
             ["convert-source-map", "npm:1.7.0"],
             ["loader-utils", "npm:1.2.3"],
             ["react", "npm:17.0.2"],
@@ -6711,7 +6711,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/use-subscription-virtual-ace88d38ca/0/cache/use-subscription-npm-1.5.1-d91d77edbb-96e64977a5.zip/node_modules/use-subscription/",
           "packageDependencies": [
             ["use-subscription", "virtual:2c181da561a25ff6c45bb0187a99e7fe4a00e3628b7388ba4287a9611108afa7003a8c7dbc1112273c16ef6c961d0fd04ea28bf0cd055c88d0b1645b8300143d#npm:1.5.1"],
-            ["@types/react", "npm:17.0.17"],
+            ["@types/react", "npm:17.0.20"],
             ["object-assign", "npm:4.1.1"],
             ["react", "npm:17.0.2"]
           ],
@@ -6832,7 +6832,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@next/eslint-plugin-next", "npm:11.1.0"],
             ["@types/animejs", "npm:3.1.4"],
             ["@types/node", "npm:16.6.1"],
-            ["@types/react", "npm:17.0.17"],
+            ["@types/react", "npm:17.0.20"],
             ["@typescript-eslint/eslint-plugin", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:4.29.1"],
             ["@typescript-eslint/parser", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:4.29.1"],
             ["animejs", "npm:3.2.1"],

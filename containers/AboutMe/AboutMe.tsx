@@ -34,9 +34,10 @@ export const AboutMe = () : JSX.Element => {
             <div className="pl-6">
                 <h1 id="tech" className='underline'>Tech</h1>
                 <br />
-                <p id="proglang">・TypeScript, JavaScript, NodeJs, Go, C</p>
-                <p id="frames">・React, NextJS, ExpressJS</p>
+                <p id="proglang">・TypeScript, JavaScript, NodeJs, GraphQL, Go, C</p>
+                <p id="frames">・React, NextJS, ExpressJS, Apollo, TailwindCSS, ChakraUI</p>
                 <p id="db">・MongoDB, PostgreSQL, MySQL</p>
+                <p id="tools">urql, TypeORM, type-graphql, pg</p>
                 <br />
                 <br />
             </div>

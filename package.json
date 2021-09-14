@@ -22,7 +22,7 @@
   "devDependencies": {
     "@next/eslint-plugin-next": "^11.1.0",
     "@types/node": "^16.6.1",
-    "@types/react": "17.0.17",
+    "@types/react": "^17.0.20",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
     "autoprefixer": "latest",

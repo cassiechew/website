@@ -19,13 +19,19 @@ const Resume: NextPage = () => (
 				<br />
 				<h5>øøøøø Melbourne, Vic</h5>
 				<br />
-				<code>Go, Docker, JSON, Javascript, TypeScript, SQL, Yaml, MongoDB, CLI, C</code>
+				<code>Go, Docker, JSON, Javascript, TypeScript, Graphql, SQL, Yaml, MongoDB, CLI, C</code>
 				<br />
 				<h2>øø Experience</h2>
 				<br />
 				<div className="" >
 					<div>
-						<h3>øøø Software Engineer @ANZ Australia : 2020 Feb - Present</h3>
+						<h3>øøø Associate Product Engineer @Papercut・Software : 2021 Sep</h3>
+						<br />
+
+						<p>・ Papercut is the maker of the papercut printing software</p>
+					</div>
+					<div>
+						<h3>øøø Software Engineer @ANZ Australia : 2020 Feb - 2021 Aug</h3>
 						<br />
 
 						<p>・ ANZ is one of the large Banks in Australia</p>
