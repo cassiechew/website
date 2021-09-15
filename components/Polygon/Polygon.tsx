@@ -2,7 +2,7 @@
 
 export const Polygon = () : JSX.Element => (
 	<div className="morphing content-center justify-center flex">
-		<svg width="140" height="140" viewBox="0 0 140 140">
+		{/* <svg width="140" height="140" viewBox="0 0 140 140">
 			<g fill="none" fillRule="evenodd">
 				<g fill="pink" fillOpacity=".15" transform="translate(0 6)">
 					<polygon points="70 0 136.574 48.369 111.145 126.631 28.855 126.631 3.426 48.369"></polygon>
@@ -26,6 +26,6 @@ export const Polygon = () : JSX.Element => (
                         58.09676186916005
                 "></polygon>
 			</g>
-		</svg>
+		</svg> */}
 	</div>
 );

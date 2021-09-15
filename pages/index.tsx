@@ -28,12 +28,12 @@ const Home: NextPage = () => {
 				<br />
 				<main className="flex flex-row justify-center">
 					{/* Uncomment for spicy boxes */}
-					<div className="flex flex-row-reverse justify-center items-center">
+					{/* <div className="flex flex-row-reverse justify-center items-center">
 						<div className="flex flex-col pr-10 items-baseline">
 							<img className="pink-box-1 pb-1" src="/pink_square.svg" alt="Pink Square" width="50" height="50" />
 							<img className="down-pink-box-1 pt-1" src="/pink_square.svg" alt="Pink Square" width="50" height="50" />
 						</div>
-					</div>
+					</div> */}
 
 					<div className="flex flex-col justify-center">
 						<div className="flex justify-center">
@@ -48,12 +48,12 @@ const Home: NextPage = () => {
 						<br />
 					</div>
 					{/* Uncomment for spicy boxes */}
-					<div className="flex flex-row-reverse justify-center items-center">
+					{/* <div className="flex flex-row-reverse justify-center items-center">
 						<div className="flex flex-col pl-10 items-baseline">
 							<img className="pink-box-2 pb-1" src="/pink_square.svg" alt="Pink Square" width="50" height="50" />
 							<img className="down-pink-box-2 pt-1" src="/pink_square.svg" alt="Pink Square" width="50" height="50" />
 						</div>
-					</div>
+					</div> */}
 				</main>
 				<Footer />
 			</div>
