@@ -28,22 +28,6 @@ import Footer from '../containers/Footer';
 
 // Import animate from '../util/animations';
 
-const cursorFrames = keyframes`
-  0% {background-color: transparent;}
-  49% {background-color: transparent;}
-  50% {background-color: #FF0066;}
-`;
-
-const typedFramesMobile = keyframes`
-  from{width: 0;}
-  to{width: 180px;}
-`;
-
-const typedFrames = keyframes`
-  from{width: 0;}
-  to{width: 290px;}
-`;
-
 const typeWidth: string[] = ['180px', '290px'];
 
 const Home: NextPage = () => {
@@ -57,10 +41,30 @@ const Home: NextPage = () => {
     setWindowWidth(visualViewport.width);
   }, []);
 
+  const headingHeight = { base: '54px', lg: '90px' };
+  const bodyText = { base: 'md', md: 'lg', lg: '4xl' };
+  const descText = { base: 'sm', md: 'md', lg: '2xl' };
+  const emphasisText = '#FF0066';
+
+  const cursorFrames = keyframes`
+  0% {background-color: transparent;}
+  49% {background-color: transparent;}
+  50% {background-color: ${emphasisText};}
+`;
+
+  const typedFramesMobile = keyframes`
+  from{width: 0;}
+  to{width: 180px;}
+`;
+
+  const typedFrames = keyframes`
+  from{width: 0;}
+  to{width: 290px;}
+`;
+
   const animation = `${cursorFrames} infinite 0.75s`;
   const textAnimationMobile = `${typedFramesMobile} 0.75s steps(30,end) 1s 1 normal both`;
   const textAnimation = `${typedFrames} 0.75s steps(30,end) 1s 1 normal both`;
-  const headingHeight = { base: '54px', lg: '90px' };
 
   return (
     <Flex flexDirection="column" height="screen" width="100%">
@@ -70,10 +74,45 @@ const Home: NextPage = () => {
 
         <Container ml={{ base: '5', lg: '300' }} justifyContent="center">
           <Flex width={{ base: '90vw', lg: '60vw' }} justifyContent="center" flexDirection="column">
+
+            <Box position="fixed" top="87vh" left="90vw" width="100%">
+              <button
+                type="button"
+                onClick={() => {
+                  window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth',
+
+                  });
+                }}
+              >
+                To Top
+              </button>
+            </Box>
+            <Box position="fixed" top="90vh" left="90vw" width="100%">
+              <button
+                type="button"
+                onClick={() => {
+                  const pageBottom = document.querySelector('#bottom');
+                  if (pageBottom !== null) { pageBottom.scrollIntoView({ behavior: 'smooth' }); }
+                }}
+              >
+                To Bottom
+              </button>
+            </Box>
             <Box alignItems="center">
               <Box pt={windowHeight * 0.35}>
                 <Flex flexDirection="row" overflow="hidden" height={headingHeight}>
-                  <Text id="typed" animation={{ base: textAnimationMobile, lg: textAnimation }} overflow="hidden" fontSize={{ base: '4xl', lg: '6xl' }} color="#FF0066">{'~/readme '}</Text>
+                  <Text
+                    id="typed"
+                    animation={{ base: textAnimationMobile, lg: textAnimation }}
+                    overflow="hidden"
+                    fontSize={{ base: '4xl', lg: '6xl' }}
+                    color={emphasisText}
+                  >
+                    {'~/README '}
+
+                  </Text>
                   <Box
                     animation={animation}
                     ml="5px"
@@ -85,18 +124,16 @@ const Home: NextPage = () => {
                 </Flex>
                 {' '}
                 <Heading pl="50px" size="2xl">Hi! I'm Cassie.</Heading>
-                <Text pl="50px" fontSize={{ base: 'md', md: 'lg', lg: '4xl' }}>Full Stack Engineer | Linguist | Gamer</Text>
+                <Text pl="50px" fontSize={bodyText}>Full Stack Engineer | Linguist | Gamer</Text>
 
               </Box>
-              <Box className="trigger" />
+              <Box className="trigger" position="fixed" />
               <Controller>
                 <Box alignItems="center">
-                  {/* <Scene triggerElement="trigger" /> */}
                   <Scene
-                    duration={windowHeight * 1.5}
-                    // triggerHook={0.5}
+                    duration={windowHeight}
                     pin
-                    triggerElement="trigger"
+                    // triggerElement=".trigger"
                     offset={185}
                   >
                     {(progress: number | undefined) => (
@@ -106,7 +143,13 @@ const Home: NextPage = () => {
                             target={(
                               <>
                                 <Flex flexDirection="row" overflow="hidden" height={headingHeight}>
-                                  <Text fontSize={{ base: '4xl', lg: '6xl' }} color="#FF0066">~/.histrc</Text>
+                                  <Text
+                                    fontSize={{ base: '4xl', lg: '6xl' }}
+                                    color={emphasisText}
+                                  >
+                                    ~/.hist
+
+                                  </Text>
                                 </Flex>
                                 <Heading pl="50px" size="2xl" mr="0">[[ life && work ]] ; then</Heading>
                               </>
@@ -130,21 +173,219 @@ const Home: NextPage = () => {
                               target={1}
                               from={{
                                 overflow: 'hidden',
-                                height: 48,
+                                height: 50,
                                 opacity: 0,
                                 width: 0,
                               }}
                               to={{
                                 overflow: 'hidden',
-                                height: 48,
+                                height: 50,
                                 opacity: 1,
-                                width: '200%',
+                                width: '100%',
+                              }}
+                              ease={Power3.easeIn}
+                            />
+                          </Timeline>
+                        </Timeline>
+                      </Box>
+                    )}
+                  </Scene>
+                  <Scene
+                    duration={windowHeight}
+                    pin
+                    offset={155}
+                  >
+                    {(progress: number | undefined) => (
+                      <Box alignItems="center">
+                        <Timeline totalProgress={progress} paused>
+                          <Timeline
+                            target={(
+                              <>
+                                <Flex flexDirection="row" overflow="hidden" height={headingHeight}>
+                                  <Text
+                                    fontSize={{ base: '4xl', lg: '6xl' }}
+                                    color={emphasisText}
+                                  >
+                                    ~/.hist/.papercut
+
+                                  </Text>
+                                </Flex>
+                              </>
+                            )}
+                          >
+                            <Tween
+                              from={{
+                                overflow: 'hidden',
+                                opacity: 0,
+                                width: 0,
+                              }}
+                            />
+                            <Tween to={{
+                              overflow: 'hidden',
+                              opacity: 1,
+                              width: '100%',
+                            }}
+                            />
+                            <Tween to={{ opacity: 0 }} />
+                          </Timeline>
+                        </Timeline>
+                      </Box>
+                    )}
+                  </Scene>
+                  <Scene
+                    duration={windowHeight / 2}
+                    pin
+                    offset={145}
+                  >
+                    {(progress: number | undefined) => (
+                      <Box alignItems="center">
+                        <Timeline totalProgress={progress} paused>
+                          <Timeline
+                            target={(
+                              <>
+                                <Heading size="xl">
+                                  I'm currently working at
+                                  {' '}
+                                  <Text display="inline" color={emphasisText}>$papercut_software</Text>
+                                  {' '}
+                                  as an
+                                  <Text display="inline" color={emphasisText}> Associate Product Engineer</Text>
+                                  ,
+                                  {' '}
+                                  <Text display="inline" color={emphasisText}>developing</Text>
+                                  {' '}
+                                  and
+                                  {' '}
+                                  <Text display="inline" color={emphasisText}>improving</Text>
+                                  {' '}
+                                  solutions and processes.
+                                </Heading>
+                                <Text pl="50px" fontSize={descText}>$ tech=(typescript golang bash automation)</Text>
+                              </>
+                            )}
+                          >
+                            <Tween
+                              from={{
+                                overflow: 'hidden',
+                                opacity: 0,
+
+                              }}
+                              to={{
+                                overflow: 'hidden',
+                                opacity: 1,
+
                               }}
                             />
                           </Timeline>
                         </Timeline>
                       </Box>
                     )}
+                  </Scene>
+                  <Scene
+                    duration={windowHeight}
+                    pin
+                    offset={155}
+                  >
+                    {(progress: number | undefined) => (
+                      <Box alignItems="center">
+                        <Timeline totalProgress={progress} paused>
+                          <Timeline
+                            target={(
+                              <>
+                                <Flex flexDirection="row" overflow="hidden" height={headingHeight}>
+                                  <Text
+                                    fontSize={{ base: '4xl', lg: '6xl' }}
+                                    color={emphasisText}
+                                  >
+                                    ~/.hist/.anz
+                                  </Text>
+                                </Flex>
+                              </>
+                            )}
+                          >
+                            <Tween
+                              from={{
+                                overflow: 'hidden',
+                                opacity: 0,
+                                width: 0,
+                              }}
+                            />
+                            <Tween to={{
+                              overflow: 'hidden',
+                              opacity: 1,
+                              width: '100%',
+                            }}
+                            />
+                            <Tween to={{ opacity: 0 }} />
+                          </Timeline>
+                        </Timeline>
+                      </Box>
+                    )}
+                  </Scene>
+                  <Scene
+                    duration={windowHeight / 2}
+                    pin
+                    offset={145}
+                  >
+                    {(progress: number | undefined) => (
+                      <Box alignItems="center">
+                        <Timeline totalProgress={progress} paused>
+                          <Timeline
+                            target={(
+                              <>
+                                <Heading size="xl">
+                                  I worked at
+                                  {' '}
+                                  <Text display="inline" color={emphasisText}>$anz_australia</Text>
+                                  {' '}
+                                  as an
+                                  <Text display="inline" color={emphasisText}> Engineer</Text>
+                                  .
+                                  {' '}
+                                  <Text display="inline" color={emphasisText}>Designing</Text>
+                                  {' '}
+                                  and
+                                  {' '}
+                                  <Text
+                                    display="inline"
+                                    color={emphasisText}
+                                  >
+                                    Building API micro-service endpoints
+                                  </Text>
+                                  , as well as contributing to
+                                  {' '}
+                                  <Text display="inline" color={emphasisText}>CLI testing tools</Text>
+                                  .
+                                </Heading>
+                                <Text
+                                  pl="50px"
+                                  fontSize={descText}
+                                >
+                                  $ tech=(golang micro-services APIs
+                                  gRPC gCloud pubsub serverless CLI)
+                                </Text>
+                              </>
+                            )}
+                          >
+                            <Tween
+                              from={{
+                                overflow: 'hidden',
+                                opacity: 0,
+
+                              }}
+                              to={{
+                                overflow: 'hidden',
+                                opacity: 1,
+
+                              }}
+                            />
+                          </Timeline>
+                        </Timeline>
+                      </Box>
+                    )}
+                  </Scene>
+                  <Scene duration="600" pin>
+                    <Box id="bottom" />
                   </Scene>
                 </Box>
               </Controller>
@@ -155,18 +396,5 @@ const Home: NextPage = () => {
     </Flex>
   );
 };
-
-// {/* <div className="flex flex-col justify-center">
-//                 <div className="flex justify-center">
-//                     <AboutMe />
-//                 </div>
-//                 <br />
-//                 <div>
-//                     <ul>
-//                         <To name="github" />
-//                     </ul>
-//                 </div>
-//                 <br />
-//             </div> */}
 
 export default Home;
