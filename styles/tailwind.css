@@ -9,3 +9,9 @@
 .flex-sizing {
     flex: 0 0 75%;
 }
+
+@keyframes {
+    0% {background-color: transparent;}
+  49% {background-color: transparent;}
+  50% {background-color: #FF0066;}
+}

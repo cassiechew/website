@@ -1,19 +1,19 @@
-import type {NextPage} from 'next';
-import {useRouter} from 'next/router';
-import {useEffect} from 'react';
+import type { NextPage } from 'next';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 
 import Header from '../components/Header';
 
 const Github: NextPage = () => {
-	const router = useRouter();
+  const router = useRouter();
 
-	useEffect(() => {
-		router.push('/');
-	});
+  useEffect(() => {
+    router.push('/');
+  });
 
-	return (
-		<div><Header /></div>
-	);
+  return (
+    <div><Header /></div>
+  );
 };
 
 export default Github;
