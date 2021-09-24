@@ -5,7 +5,6 @@ import {
   LinkOverlay,
   Text,
 } from '@chakra-ui/react';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 declare type Props = {
@@ -20,13 +19,13 @@ export const To = ({ name, to } : Props) : JSX.Element => {
     <>
       <LinkBox>
         <LinkOverlay href={`/${to}`}>
-          <Link href={`/${to}`}>
-            <a
-              href={`/${to}`}
-            >
-              <Text pr="50px" color={color} fontSize="2xl">{name}</Text>
-            </a>
-          </Link>
+
+          <a
+            href={`/${to}`}
+          >
+            <Text pr="50px" color={color} fontSize="2xl">{name}</Text>
+          </a>
+
         </LinkOverlay>
       </LinkBox>
     </>
