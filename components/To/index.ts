@@ -1,5 +1,5 @@
 // Components/ALink/index.ts
 
-import {To} from './To';
+import { To } from './To';
 
 export default To;

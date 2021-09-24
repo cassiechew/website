@@ -1,5 +1,5 @@
 // Containers/Footer/index.ts
 
-import {Footer} from '../Footer/Footer';
+import { Footer } from './Footer';
 
 export default Footer;

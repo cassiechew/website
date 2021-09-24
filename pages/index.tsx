@@ -1,7 +1,24 @@
 // Pages/index.tsx
 
-import type {NextPage} from 'next';
+import type { NextPage } from 'next';
+import { useRouter } from 'next/router';
+import {
+  Flex,
+  Container,
+  Heading,
+  Text,
+  Box,
+  keyframes,
+} from '@chakra-ui/react';
 
+import { Controller, Scene } from 'react-scrollmagic';
+import {
+  Tween, Timeline,
+} from 'react-gsap';
+
+import { Power3 } from 'gsap';
+
+import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import To from '../components/To';
 
@@ -9,57 +26,119 @@ import AboutMe from '../containers/AboutMe';
 import Navbar from '../containers/Navbar';
 import Footer from '../containers/Footer';
 
-import animate from '../util/animations';
-import {useEffect} from 'react';
+// Import animate from '../util/animations';
 
-// ANIMEJS I NEED TO ADD
-// . for class
-// # for id
+const cursorFrames = keyframes`
+  0% {background-color: transparent;}
+  49% {background-color: transparent;}
+  50% {background-color: #FF0066;}
+`;
+
 const Home: NextPage = () => {
-	useEffect(() => {
-		animate('pink');
-	}, []);
+  const [windowHeight, setWindowHeight] = useState(0);
+  const [windowWidth, setWindowWidth] = useState(0);
 
-	return (
-		<div className="flex flex-col h-screen bg-gray-900 text-gray-300">
-			<div className="container flex flex-col justify-center">
-				<Header />
-				<Navbar id="navbar" />
-				<br />
-				<main className="flex flex-row justify-center">
-					{/* Uncomment for spicy boxes */}
-					{/* <div className="flex flex-row-reverse justify-center items-center">
-						<div className="flex flex-col pr-10 items-baseline">
-							<img className="pink-box-1 pb-1" src="/pink_square.svg" alt="Pink Square" width="50" height="50" />
-							<img className="down-pink-box-1 pt-1" src="/pink_square.svg" alt="Pink Square" width="50" height="50" />
-						</div>
-					</div> */}
+  const router = useRouter();
 
-					<div className="flex flex-col justify-center">
-						<div className="flex justify-center">
-							<AboutMe />
-						</div>
-						<br />
-						<div>
-							<ul>
-								<To name="github" />
-							</ul>
-						</div>
-						<br />
-					</div>
-					{/* Uncomment for spicy boxes */}
-					{/* <div className="flex flex-row-reverse justify-center items-center">
-						<div className="flex flex-col pl-10 items-baseline">
-							<img className="pink-box-2 pb-1" src="/pink_square.svg" alt="Pink Square" width="50" height="50" />
-							<img className="down-pink-box-2 pt-1" src="/pink_square.svg" alt="Pink Square" width="50" height="50" />
-						</div>
-					</div> */}
-				</main>
-				<Footer />
-			</div>
-		</div>
-	);
+  useEffect(() => {
+    setWindowHeight(visualViewport.height);
+    setWindowWidth(visualViewport.width);
+  }, []);
+
+  const animation = `${cursorFrames} infinite 1s`;
+
+  return (
+    <Flex flexDirection="column" height="screen" width="100%">
+      <Flex flexDirection="column" justifyContent="center">
+        <Header />
+        <Navbar />
+
+        <Container justifyContent="center">
+          <Flex width="60vw" justifyContent="center" flexDirection="column">
+            <Box alignItems="center">
+              <Box pt={windowHeight / 2.5}>
+                <Text fontFamily="monospace" fontSize="6xl" color="#FF0066">{'<who>'}</Text>
+                <Heading fontFamily="monospace" pl="50px" size="3xl">Hi! I'm Cassie.</Heading>
+                <Text fontFamily="monospace" pl="50px" fontSize="4xl">Full Stack Engineer.</Text>
+                <Flex flexDirection="row">
+                  <Text fontFamily="monospace" fontSize="6xl" color="#FF0066">{'</who> '}</Text>
+                  <Box
+                    animation={animation}
+                    ml="5px"
+                    borderRadius="5px"
+                    width="60px"
+                    height="auto"
+                    onClick={() => { router.push('/github'); }}
+                  />
+
+                </Flex>
+              </Box>
+              <Box className="trigger" />
+              <Controller>
+                <Box alignItems="center">
+                  {/* <Scene triggerElement="trigger" /> */}
+                  <Scene
+                    // duration={windowHeight * 2.5}
+                    // triggerHook={0.5}
+                    pin
+                    triggerElement="trigger"
+                    offset={100}
+                  >
+                    {(progress: number | undefined) => (
+                      <Box alignItems="center">
+                        <Timeline totalProgress={progress} paused>
+                          <Timeline
+                            target={(
+                              <Box>
+                                <Text className="topTag" fontSize="6xl" color="#FF0066">{'<cv>'}</Text>
+                                <Heading className="content" pl="50px" size="3xl">Life && work</Heading>
+                                {/* <Text pl="50px" fontSize="4xl">Full Stack Engineer.</Text> */}
+                                <Text className="topTag" fontSize="6xl" color="#FF0066">{'</cv>'}</Text>
+                              </Box>
+                            )}
+                          >
+                            <Tween
+                              // target="topTag"
+                              from={{
+                                yPercent: -50,
+                                // autoAlpha: 0,
+                                rotationY: 90,
+                                // transformOrigin: '50% 50% -100px',
+                                ease: Power3.easeOut,
+                              }}
+                              to={{
+                                // autoAlpha: 0,
+                                rotationY: 0,
+                                yPercent: -100,
+                              }}
+                              duration={0.1}
+                            />
+                          </Timeline>
+                        </Timeline>
+                      </Box>
+                    )}
+                  </Scene>
+                </Box>
+              </Controller>
+            </Box>
+          </Flex>
+        </Container>
+      </Flex>
+    </Flex>
+  );
 };
 
-export default Home;
+// {/* <div className="flex flex-col justify-center">
+//                 <div className="flex justify-center">
+//                     <AboutMe />
+//                 </div>
+//                 <br />
+//                 <div>
+//                     <ul>
+//                         <To name="github" />
+//                     </ul>
+//                 </div>
+//                 <br />
+//             </div> */}
 
+export default Home;

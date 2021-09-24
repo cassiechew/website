@@ -1,19 +1,30 @@
 // Components/ALink/ALink.tsx
 
+import {
+  Text,
+} from '@chakra-ui/react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 declare type Props = {
-    name : string
+    name : string,
+    to: string
 }
 
-export const To = (props: Props) : JSX.Element => (
-	<>
-		<Link href={'/' + props.name}>
-			<a className="underline
-				text-pink-600
-				hover:text-white
-				hover:bg-pink-600"
-			>{props.name.charAt(0).toUpperCase() + props.name.slice(1)}</a>
-		</Link>
-	</>
-);
+export const To = ({ name, to } : Props) : JSX.Element => {
+  const router = useRouter();
+  const color = router.pathname === `/${to}` ? '#FF0066' : 'white';
+  return (
+    <>
+      <Link href={`/${to}`}>
+        <a
+          href={`/${to}`}
+
+        >
+          <Text pr="50px" color={color} fontSize="2xl">{name}</Text>
+
+        </a>
+      </Link>
+    </>
+  );
+};
