@@ -203,13 +203,31 @@ const Home: NextPage = () => {
                           <Timeline
                             target={(
                               <>
-                                <Flex flexDirection="row" overflow="hidden" height={headingHeight}>
+                                <Flex flexDirection="column">
                                   <Text
                                     fontSize={{ base: '4xl', lg: '6xl' }}
                                     color={emphasisText}
                                   >
                                     ~/.hist/.papercut
                                   </Text>
+                                  <Heading pl="50px" size="xl">
+                                    I'm currently working at
+                                    {' '}
+                                    <Text display="inline" color={emphasisText}>$papercut_software</Text>
+                                    {' '}
+                                    as an
+                                    <Text display="inline" color={emphasisText}> Associate Product Engineer</Text>
+                                    ,
+                                    {' '}
+                                    <Text display="inline" color={emphasisText}>developing</Text>
+                                    {' '}
+                                    and
+                                    {' '}
+                                    <Text display="inline" color={emphasisText}>improving</Text>
+                                    {' '}
+                                    solutions and processes.
+                                  </Heading>
+                                  <Text pl="50px" fontSize={descText}>$ tech=(typescript golang bash automation)</Text>
                                 </Flex>
                               </>
                             )}
@@ -228,55 +246,6 @@ const Home: NextPage = () => {
                             }}
                             />
                             <Tween to={{ opacity: 0 }} />
-                          </Timeline>
-                        </Timeline>
-                      </Box>
-                    )}
-                  </Scene>
-                  <Scene
-                    duration={windowHeight / 2}
-                    pin
-                    offset={145}
-                  >
-                    {(progress: number | undefined) => (
-                      <Box alignItems="center">
-                        <Timeline totalProgress={progress} paused>
-                          <Timeline
-                            target={(
-                              <>
-                                <Heading size="xl">
-                                  I'm currently working at
-                                  {' '}
-                                  <Text display="inline" color={emphasisText}>$papercut_software</Text>
-                                  {' '}
-                                  as an
-                                  <Text display="inline" color={emphasisText}> Associate Product Engineer</Text>
-                                  ,
-                                  {' '}
-                                  <Text display="inline" color={emphasisText}>developing</Text>
-                                  {' '}
-                                  and
-                                  {' '}
-                                  <Text display="inline" color={emphasisText}>improving</Text>
-                                  {' '}
-                                  solutions and processes.
-                                </Heading>
-                                <Text pl="50px" fontSize={descText}>$ tech=(typescript golang bash automation)</Text>
-                              </>
-                            )}
-                          >
-                            <Tween
-                              from={{
-                                overflow: 'hidden',
-                                opacity: 0,
-
-                              }}
-                              to={{
-                                overflow: 'hidden',
-                                opacity: 1,
-
-                              }}
-                            />
                           </Timeline>
                         </Timeline>
                       </Box>
@@ -293,12 +262,43 @@ const Home: NextPage = () => {
                           <Timeline
                             target={(
                               <>
-                                <Flex flexDirection="row" overflow="hidden" height={headingHeight}>
+                                <Flex flexDirection="column">
                                   <Text
                                     fontSize={{ base: '4xl', lg: '6xl' }}
                                     color={emphasisText}
                                   >
                                     ~/.hist/.anz
+                                  </Text>
+                                  <Heading pl="50px" size="xl">
+                                    I worked at
+                                    {' '}
+                                    <Text display="inline" color={emphasisText}>$anz_australia</Text>
+                                    {' '}
+                                    as an
+                                    <Text display="inline" color={emphasisText}> Engineer</Text>
+                                    .
+                                    {' '}
+                                    <Text display="inline" color={emphasisText}>Designing</Text>
+                                    {' '}
+                                    and
+                                    {' '}
+                                    <Text
+                                      display="inline"
+                                      color={emphasisText}
+                                    >
+                                      Building API micro-service endpoints
+                                    </Text>
+                                    , as well as contributing to
+                                    {' '}
+                                    <Text display="inline" color={emphasisText}>CLI testing tools</Text>
+                                    .
+                                  </Heading>
+                                  <Text
+                                    pl="50px"
+                                    fontSize={descText}
+                                  >
+                                    $ tech=(golang micro-services APIs
+                                    gRPC gCloud pubsub serverless CLI)
                                   </Text>
                                 </Flex>
                               </>
@@ -334,37 +334,7 @@ const Home: NextPage = () => {
                           <Timeline
                             target={(
                               <>
-                                <Heading size="xl">
-                                  I worked at
-                                  {' '}
-                                  <Text display="inline" color={emphasisText}>$anz_australia</Text>
-                                  {' '}
-                                  as an
-                                  <Text display="inline" color={emphasisText}> Engineer</Text>
-                                  .
-                                  {' '}
-                                  <Text display="inline" color={emphasisText}>Designing</Text>
-                                  {' '}
-                                  and
-                                  {' '}
-                                  <Text
-                                    display="inline"
-                                    color={emphasisText}
-                                  >
-                                    Building API micro-service endpoints
-                                  </Text>
-                                  , as well as contributing to
-                                  {' '}
-                                  <Text display="inline" color={emphasisText}>CLI testing tools</Text>
-                                  .
-                                </Heading>
-                                <Text
-                                  pl="50px"
-                                  fontSize={descText}
-                                >
-                                  $ tech=(golang micro-services APIs
-                                  gRPC gCloud pubsub serverless CLI)
-                                </Text>
+
                               </>
                             )}
                           >
@@ -401,7 +371,7 @@ const Home: NextPage = () => {
                                     fontSize={{ base: '4xl', lg: '6xl' }}
                                     color={emphasisText}
                                   >
-                                    ~/.config
+                                    ~/.build
                                   </Text>
                                   <Text pl="50px" fontSize={bodyText}>NextJS, React, Chakra-ui, Scrollmagic, Gsap.</Text>
                                 </Flex>
@@ -438,13 +408,36 @@ const Home: NextPage = () => {
                           <Timeline
                             target={(
                               <>
-                                <Flex flexDirection="row" overflow="hidden" height={headingHeight}>
+                                <Flex flexDirection="column">
                                   <Text
                                     fontSize={{ base: '4xl', lg: '6xl' }}
                                     color={emphasisText}
                                   >
                                     ~/.contact
                                   </Text>
+                                  <Flex height="55vh" bg="black" p="10" borderRadius="10px" flexDirection="column">
+                                    <FormLabel color="#FF0066">~$ ./.contact</FormLabel>
+                                    <form>
+                                      <FormControl id="name">
+                                        <FormLabel color={emphasisText}>
+                                          ~$ What is your name?
+                                        </FormLabel>
+                                        <Input color="white" _focus={{ color: '#FF0066' }} type="text" borderColor="transparent" />
+                                      </FormControl>
+                                      <FormControl id="email">
+                                        <FormLabel color={emphasisText}>
+                                          ~$ What is your email?
+                                        </FormLabel>
+                                        <Input color="white" _focus={{ color: '#FF0066' }} type="text" borderColor="transparent" />
+                                      </FormControl>
+                                      <FormControl id="message">
+                                        <FormLabel color={emphasisText}>
+                                          ~$ What do you want to say?
+                                        </FormLabel>
+                                        <Textarea color="white" _focus={{ color: '#FF0066' }} resize="none" rows={8} cols={80} type="text" borderColor="transparent" />
+                                      </FormControl>
+                                    </form>
+                                  </Flex>
                                 </Flex>
                               </>
                             )}
@@ -468,65 +461,9 @@ const Home: NextPage = () => {
                       </Box>
                     )}
                   </Scene>
-                  <Scene
-                    duration={windowHeight / 2}
-                    pin
-                    offset={145}
-                  >
-                    {(progress: number | undefined) => (
-                      <Box alignItems="center">
-                        <Timeline totalProgress={progress} paused>
-                          <Timeline
-                            target={(
-                              <>
-                                <Flex height="80vh" bg="black" p="10" borderRadius="10px" flexDirection="column">
-                                  <FormLabel color="#FF0066">~$ ./.contact</FormLabel>
-                                  <form>
-                                    <FormControl id="name">
-                                      <FormLabel color={emphasisText}>
-                                        ~$ What is your name?
-                                      </FormLabel>
-                                      <Input color="white" _focus={{ color: '#FF0066' }} type="text" borderColor="transparent" />
-                                    </FormControl>
-                                    <FormControl id="email">
-                                      <FormLabel color={emphasisText}>
-                                        ~$ What is your email?
-                                      </FormLabel>
-                                      <Input color="white" _focus={{ color: '#FF0066' }} type="text" borderColor="transparent" />
-                                    </FormControl>
-                                    <FormControl id="message">
-                                      <FormLabel color={emphasisText}>
-                                        ~$ What do you want to say?
-                                      </FormLabel>
-                                      <Textarea color="white" _focus={{ color: '#FF0066' }} resize="none" rows={10} cols={80} type="text" borderColor="transparent" />
-                                    </FormControl>
-
-                                  </form>
-
-                                </Flex>
-                              </>
-                            )}
-                          >
-                            <Tween
-                              from={{
-                                overflow: 'hidden',
-                                opacity: 0,
-
-                              }}
-                              to={{
-                                overflow: 'hidden',
-                                opacity: 1,
-
-                              }}
-                            />
-                          </Timeline>
-                        </Timeline>
-                      </Box>
-                    )}
-                  </Scene>
-                  <Scene duration="80" pin>
+                  {/* <Scene duration="80" pin>
                     <Box id="bottom" />
-                  </Scene>
+                  </Scene> */}
                 </Box>
               </Controller>
             </Box>
