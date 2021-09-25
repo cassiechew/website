@@ -1,8 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import type { AppProps } from 'next/app';
 import { ChakraProvider, extendTheme, ScaleFade } from '@chakra-ui/react';
-import { StyleFunctionProps } from '@chakra-ui/theme-tools';
-import { Dict } from '@chakra-ui/utils';
 
 function MyApp({ Component, pageProps, router }: AppProps) : JSX.Element {
 //   const currentPage = React.createContext('/');
