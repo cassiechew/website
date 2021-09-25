@@ -42,9 +42,7 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.26.0",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "postcss": "latest",
     "prettier": "^2.3.2",
-    "tailwindcss": "latest",
     "typescript": "4.3.5"
   },
   "packageManager": "yarn@3.0.1-rc.2"

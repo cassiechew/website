@@ -1,21 +1,15 @@
 // Components/Navbar/Navbar.tsx
 
 import {
-  Flex, Drawer, Text,
-  DrawerBody,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerOverlay,
-  DrawerContent,
-  DrawerCloseButton,
+  Flex, Text,
 } from '@chakra-ui/react';
 import To from '../../components/To';
 
-import Bar from '../../components/Bar';
+// import Bar from '../../components/Bar';
 
-declare type Props = {
-    id: string,
-}
+// declare type Props = {
+//     id: string,
+// }
 
 export const Navbar = () : JSX.Element => (
   <Flex flexDirection="row" width="100%">

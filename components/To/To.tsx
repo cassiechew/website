@@ -5,7 +5,7 @@ import {
   LinkOverlay,
   Text,
 } from '@chakra-ui/react';
-import { mode } from '@chakra-ui/theme-tools';
+// import { mode } from '@chakra-ui/theme-tools';
 import { useRouter } from 'next/router';
 
 declare type Props = {

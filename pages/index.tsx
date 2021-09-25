@@ -12,7 +12,7 @@ import {
   FormControl,
   FormLabel,
   Input,
-  Textarea
+  Textarea,
 } from '@chakra-ui/react';
 
 import { Controller, Scene } from 'react-scrollmagic';
@@ -24,25 +24,25 @@ import { Power3 } from 'gsap';
 
 import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
-import To from '../components/To';
+// import To from '../components/To';
 
-import AboutMe from '../containers/AboutMe';
+// import AboutMe from '../containers/AboutMe';
 import Navbar from '../containers/Navbar';
-import Footer from '../containers/Footer';
+// import Footer from '../containers/Footer';
 
 // Import animate from '../util/animations';
 
-const typeWidth: string[] = ['180px', '290px'];
+// const typeWidth: string[] = ['180px', '290px'];
 
 const Home: NextPage = () => {
   const [windowHeight, setWindowHeight] = useState(0);
-  const [windowWidth, setWindowWidth] = useState(0);
+  // const [windowWidth, setWindowWidth] = useState(0);
 
   const router = useRouter();
 
   useEffect(() => {
     setWindowHeight(visualViewport.height);
-    setWindowWidth(visualViewport.width);
+    // setWindowWidth(visualViewport.width);
   }, []);
 
   const headingHeight = { base: '54px', lg: '90px' };
@@ -483,20 +483,26 @@ const Home: NextPage = () => {
                                   <FormLabel color="#FF0066">~$ ./.contact</FormLabel>
                                   <form>
                                     <FormControl id="name">
-                                      <FormLabel color={emphasisText}>~$ What is your name?</FormLabel>
-                                      <Input color='white' _focus={{color: '#FF0066'}} type="text" borderColor="transparent"/>
+                                      <FormLabel color={emphasisText}>
+                                        ~$ What is your name?
+                                      </FormLabel>
+                                      <Input color="white" _focus={{ color: '#FF0066' }} type="text" borderColor="transparent" />
                                     </FormControl>
                                     <FormControl id="email">
-                                      <FormLabel color={emphasisText}>~$ What is your email?</FormLabel>
-                                      <Input color='white' _focus={{color: '#FF0066'}} type="text" borderColor="transparent"/>
+                                      <FormLabel color={emphasisText}>
+                                        ~$ What is your email?
+                                      </FormLabel>
+                                      <Input color="white" _focus={{ color: '#FF0066' }} type="text" borderColor="transparent" />
                                     </FormControl>
                                     <FormControl id="message">
-                                      <FormLabel color={emphasisText}>~$ What do you want to say?</FormLabel>
-                                      <Textarea color='white' _focus={{color: '#FF0066'}} resize="none" rows={10} cols={80} type="text" borderColor="transparent"/>
+                                      <FormLabel color={emphasisText}>
+                                        ~$ What do you want to say?
+                                      </FormLabel>
+                                      <Textarea color="white" _focus={{ color: '#FF0066' }} resize="none" rows={10} cols={80} type="text" borderColor="transparent" />
                                     </FormControl>
 
                                   </form>
-                                  
+
                                 </Flex>
                               </>
                             )}

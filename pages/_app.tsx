@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import type { AppProps } from 'next/app';
-import { background, ChakraProvider, extendTheme } from '@chakra-ui/react';
+import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import { mode } from '@chakra-ui/theme-tools';
 
 function MyApp({ Component, pageProps }: AppProps) : JSX.Element {
@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }: AppProps) : JSX.Element {
         body: 'monospace',
       },
       styles: {
-        global: (props: any) => ({
+        global: (props: unknown) => ({
           body: {
             bg: mode('white', 'black')(props),
           },
