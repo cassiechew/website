@@ -3,7 +3,7 @@
 import {
   Flex, Text,
 } from '@chakra-ui/react';
-import { DarkModeToggle } from '../../components/DarkModeToggle/DarkModeToggle';
+import DarkModeToggle from '../../components/DarkModeToggle';
 import To from '../../components/To';
 
 // import Bar from '../../components/Bar';
