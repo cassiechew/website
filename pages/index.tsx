@@ -350,38 +350,7 @@ const Home: NextPage = () => {
                       </Box>
                     )}
                   </Scene>
-                  <Scene
-                    duration={windowHeight / 2}
-                    pin
-                    offset={145}
-                  >
-                    {(progress: number | undefined) => (
-                      <Box alignItems="center">
-                        <Timeline totalProgress={progress} paused>
-                          <Timeline
-                            target={(
-                              <>
 
-                              </>
-                            )}
-                          >
-                            <Tween
-                              from={{
-                                overflow: 'hidden',
-                                opacity: 0,
-
-                              }}
-                              to={{
-                                overflow: 'hidden',
-                                opacity: 1,
-
-                              }}
-                            />
-                          </Timeline>
-                        </Timeline>
-                      </Box>
-                    )}
-                  </Scene>
                   <Scene
                     duration={windowHeight / 2}
                     pin
