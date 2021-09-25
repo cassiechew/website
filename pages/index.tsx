@@ -9,6 +9,10 @@ import {
   Text,
   Box,
   keyframes,
+  FormControl,
+  FormLabel,
+  Input,
+  Textarea
 } from '@chakra-ui/react';
 
 import { Controller, Scene } from 'react-scrollmagic';
@@ -82,7 +86,6 @@ const Home: NextPage = () => {
                   window.scrollTo({
                     top: 0,
                     behavior: 'smooth',
-
                   });
                 }}
               >
@@ -111,7 +114,6 @@ const Home: NextPage = () => {
                     color={emphasisText}
                   >
                     {'~/README '}
-
                   </Text>
                   <Box
                     animation={animation}
@@ -207,7 +209,6 @@ const Home: NextPage = () => {
                                     color={emphasisText}
                                   >
                                     ~/.hist/.papercut
-
                                   </Text>
                                 </Flex>
                               </>
@@ -384,7 +385,140 @@ const Home: NextPage = () => {
                       </Box>
                     )}
                   </Scene>
-                  <Scene duration="600" pin>
+                  <Scene
+                    duration={windowHeight}
+                    pin
+                    offset={155}
+                  >
+                    {(progress: number | undefined) => (
+                      <Box alignItems="center">
+                        <Timeline totalProgress={progress} paused>
+                          <Timeline
+                            target={(
+                              <>
+                                <Flex flexDirection="column">
+                                  <Text
+                                    fontSize={{ base: '4xl', lg: '6xl' }}
+                                    color={emphasisText}
+                                  >
+                                    ~/.config
+                                  </Text>
+                                  <Text pl="50px" fontSize={bodyText}>NextJS, React, Chakra-ui, Scrollmagic, Gsap.</Text>
+                                </Flex>
+                              </>
+                            )}
+                          >
+                            <Tween
+                              from={{
+                                overflow: 'hidden',
+                                opacity: 0,
+                                width: 0,
+                              }}
+                            />
+                            <Tween to={{
+                              overflow: 'hidden',
+                              opacity: 1,
+                              width: '100%',
+                            }}
+                            />
+                            <Tween to={{ opacity: 0 }} />
+                          </Timeline>
+                        </Timeline>
+                      </Box>
+                    )}
+                  </Scene>
+                  <Scene
+                    duration={windowHeight}
+                    pin
+                    offset={155}
+                  >
+                    {(progress: number | undefined) => (
+                      <Box alignItems="center">
+                        <Timeline totalProgress={progress} paused>
+                          <Timeline
+                            target={(
+                              <>
+                                <Flex flexDirection="row" overflow="hidden" height={headingHeight}>
+                                  <Text
+                                    fontSize={{ base: '4xl', lg: '6xl' }}
+                                    color={emphasisText}
+                                  >
+                                    ~/.contact
+                                  </Text>
+                                </Flex>
+                              </>
+                            )}
+                          >
+                            <Tween
+                              from={{
+                                overflow: 'hidden',
+                                opacity: 0,
+                                width: 0,
+                              }}
+                            />
+                            <Tween to={{
+                              overflow: 'hidden',
+                              opacity: 1,
+                              width: '100%',
+                            }}
+                            />
+                            <Tween to={{ opacity: 0 }} />
+                          </Timeline>
+                        </Timeline>
+                      </Box>
+                    )}
+                  </Scene>
+                  <Scene
+                    duration={windowHeight / 2}
+                    pin
+                    offset={145}
+                  >
+                    {(progress: number | undefined) => (
+                      <Box alignItems="center">
+                        <Timeline totalProgress={progress} paused>
+                          <Timeline
+                            target={(
+                              <>
+                                <Flex height="80vh" bg="black" p="10" borderRadius="10px" flexDirection="column">
+                                  <FormLabel color="#FF0066">~$ ./.contact</FormLabel>
+                                  <form>
+                                    <FormControl id="name">
+                                      <FormLabel color={emphasisText}>~$ What is your name?</FormLabel>
+                                      <Input color='white' _focus={{color: '#FF0066'}} type="text" borderColor="transparent"/>
+                                    </FormControl>
+                                    <FormControl id="email">
+                                      <FormLabel color={emphasisText}>~$ What is your email?</FormLabel>
+                                      <Input color='white' _focus={{color: '#FF0066'}} type="text" borderColor="transparent"/>
+                                    </FormControl>
+                                    <FormControl id="message">
+                                      <FormLabel color={emphasisText}>~$ What do you want to say?</FormLabel>
+                                      <Textarea color='white' _focus={{color: '#FF0066'}} resize="none" rows={10} cols={80} type="text" borderColor="transparent"/>
+                                    </FormControl>
+
+                                  </form>
+                                  
+                                </Flex>
+                              </>
+                            )}
+                          >
+                            <Tween
+                              from={{
+                                overflow: 'hidden',
+                                opacity: 0,
+
+                              }}
+                              to={{
+                                overflow: 'hidden',
+                                opacity: 1,
+
+                              }}
+                            />
+                          </Timeline>
+                        </Timeline>
+                      </Box>
+                    )}
+                  </Scene>
+                  <Scene duration="80" pin>
                     <Box id="bottom" />
                   </Scene>
                 </Box>
