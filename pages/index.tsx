@@ -360,31 +360,46 @@ const Home: NextPage = () => {
                           <Timeline
                             target={(
                               <>
-                                <Flex flexDirection="column">
-                                  <Text
-                                    fontSize={{ base: '4xl', lg: '6xl' }}
-                                    color={emphasisText}
-                                    height={headingHeight}
-                                  >
-                                    ~/.build
-                                  </Text>
-                                  <Text pl="50px" fontSize={bodyText}>NextJS, React, Chakra-ui, Scrollmagic, Gsap.</Text>
-                                </Flex>
+                                <Text
+                                  fontSize={{ base: '4xl', lg: '6xl' }}
+                                  color={emphasisText}
+                                  height={headingHeight}
+                                >
+                                  ~/.build
+                                </Text>
+                                <Text pl="50px" fontSize={bodyText}>NextJS, React, Chakra-ui, Scrollmagic, Gsap.</Text>
                               </>
                             )}
                           >
                             <Tween
+                              target={0}
                               from={{
                                 overflow: 'hidden',
                                 opacity: 0,
                                 width: 0,
                               }}
                             />
-                            <Tween to={{
-                              overflow: 'hidden',
-                              opacity: 1,
-                              width: '100%',
-                            }}
+                            <Tween
+                              target={0}
+                              to={{
+                                overflow: 'hidden',
+                                opacity: 1,
+                                width: '100%',
+                              }}
+                            />
+                            <Tween
+                              target={1}
+                              from={{
+                                overflow: 'hidden',
+                                opacity: 0,
+                              }}
+                            />
+                            <Tween
+                              target={1}
+                              to={{
+                                overflow: 'hidden',
+                                opacity: 1,
+                              }}
                             />
                             {/* <Tween to={{ opacity: 0 }} /> */}
                           </Timeline>
@@ -395,7 +410,7 @@ const Home: NextPage = () => {
                   <Scene
                     duration={windowHeight / 2}
                     pin
-                    offset={155}
+                    offset={315}
                   >
                     {(progress: number | undefined) => (
                       <Box alignItems="center">
@@ -411,7 +426,7 @@ const Home: NextPage = () => {
                                     ~/.contact
                                   </Text>
                                   {/* <Box id="bottom" height="0px" /> */}
-                                  <Flex height="55vh" bg="black" p="10" borderRadius="10px" flexDirection="column">
+                                  <Flex height="70vh" bg="black" p="10" borderRadius="10px" flexDirection="column">
                                     <FormLabel color="#FF0066">~$ ./.contact</FormLabel>
                                     <form>
                                       <FormControl id="name">
@@ -469,7 +484,7 @@ const Home: NextPage = () => {
                               from={{
                                 overflow: 'hidden',
                                 opacity: 0,
-                                width: 0,
+                                width: '0%',
                               }}
                             />
                             <Tween
