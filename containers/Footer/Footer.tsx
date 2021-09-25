@@ -1,6 +1,6 @@
 // Components/Footer/Footer.tsx
 
-import Image from 'next/image';
+// import Image from 'next/image';
 
 export const Footer = () : JSX.Element => (
   <>
