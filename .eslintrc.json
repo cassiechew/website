@@ -32,7 +32,6 @@
         "import/extensions": [
             "error",
             "ignorePackages",
-            "no-extraneous-dependencies",
             {
                 "ts": "never",
                 "tsx": "never"
