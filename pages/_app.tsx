@@ -14,7 +14,6 @@ function MyApp({ Component, pageProps }: AppProps) : JSX.Element {
       },
       config: {
         initialColorMode: 'dark',
-        useSystemColorMode: true,
       },
       styles: {
         global: (props: Dict<never> | StyleFunctionProps) => ({
