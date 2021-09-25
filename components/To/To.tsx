@@ -15,7 +15,8 @@ declare type Props = {
 
 export const To = ({ name, to } : Props) : JSX.Element => {
   const router = useRouter();
-  const color = router.pathname === `/${to}` ? '#FF0066' : mode('black', 'white');
+
+  const color = router.pathname === `/${to}` ? <Text pr="50px" color="#FF0066" fontSize="2xl">{name}</Text> : <Text pr="50px" color="gray.500" fontSize="2xl">{name}</Text>;
   return (
     <>
       <LinkBox>
@@ -24,7 +25,7 @@ export const To = ({ name, to } : Props) : JSX.Element => {
           <a
             href={`/${to}`}
           >
-            <Text pr="50px" color={color} fontSize="2xl">{name}</Text>
+            {color}
           </a>
 
         </LinkOverlay>
