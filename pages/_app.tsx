@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import type { AppProps } from 'next/app';
 import { ChakraProvider, extendTheme, ScaleFade } from '@chakra-ui/react';
-import { mode, StyleFunctionProps } from '@chakra-ui/theme-tools';
+import { StyleFunctionProps } from '@chakra-ui/theme-tools';
 import { Dict } from '@chakra-ui/utils';
 
 function MyApp({ Component, pageProps, router }: AppProps) : JSX.Element {
@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps, router }: AppProps) : JSX.Element {
         body: 'monospace',
       },
       styles: {
-        global: (props: Dict<never> | StyleFunctionProps) => ({
+        global: () => ({
           body: {
             bg: 'black',
           },
