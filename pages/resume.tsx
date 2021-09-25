@@ -8,7 +8,7 @@ import Footer from '../containers/Footer';
 const Resume: NextPage = () => (
   <div className="container flex flex-col justify-center min-h-screen bg-gray-900 text-gray-300">
     <Header />
-    <Navbar id="navbar" />
+    <Navbar />
     <br />
     <main className="flex flex-col justify-center items-center">
       <div className="flex flex-col justify-center">
