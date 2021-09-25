@@ -1,10 +1,10 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import type { AppProps } from 'next/app';
-import { ChakraProvider, extendTheme } from '@chakra-ui/react';
+import { ChakraProvider, extendTheme, ScaleFade } from '@chakra-ui/react';
 import { mode, StyleFunctionProps } from '@chakra-ui/theme-tools';
 import { Dict } from '@chakra-ui/utils';
 
-function MyApp({ Component, pageProps }: AppProps) : JSX.Element {
+function MyApp({ Component, pageProps, router }: AppProps) : JSX.Element {
 //   const currentPage = React.createContext('/');
   return (
     <ChakraProvider theme={extendTheme({
@@ -15,13 +15,20 @@ function MyApp({ Component, pageProps }: AppProps) : JSX.Element {
       styles: {
         global: (props: Dict<never> | StyleFunctionProps) => ({
           body: {
-            bg: mode('white', 'black')(props),
+            bg: 'black',
           },
         }),
       },
     })}
     >
-      <Component {...pageProps} />
+      <ScaleFade
+        key={router.route}
+        initialScale={0.9}
+        in
+      >
+        <Component {...pageProps} />
+
+      </ScaleFade>
     </ChakraProvider>
   );
 }

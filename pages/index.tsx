@@ -14,6 +14,7 @@ import {
   Input,
   Textarea,
 } from '@chakra-ui/react';
+import { ChevronDownIcon } from '@chakra-ui/icons';
 
 import { Controller, Scene } from 'react-scrollmagic';
 import {
@@ -79,7 +80,7 @@ const Home: NextPage = () => {
         <Container ml={{ base: '5', lg: '300' }} justifyContent="center">
           <Flex width={{ base: '90vw', lg: '60vw' }} justifyContent="center" flexDirection="column">
 
-            <Box position="fixed" top="87vh" left="90vw" width="100%">
+            <Box position="fixed" top="95vh" zIndex={100} anchor="right" left="55vw" width="100%">
               <button
                 type="button"
                 onClick={() => {
@@ -92,17 +93,7 @@ const Home: NextPage = () => {
                 To Top
               </button>
             </Box>
-            <Box position="fixed" top="90vh" left="90vw" width="100%">
-              <button
-                type="button"
-                onClick={() => {
-                  const pageBottom = document.querySelector('#bottom');
-                  if (pageBottom !== null) { pageBottom.scrollIntoView({ behavior: 'smooth' }); }
-                }}
-              >
-                To Bottom
-              </button>
-            </Box>
+            <ChevronDownIcon position="fixed" anchor="top" top="95vh" left="50vw" h={8} w={8} />
             <Box alignItems="center">
               <Box pt={windowHeight * 0.35}>
                 <Flex flexDirection="row" overflow="hidden" height={headingHeight}>
@@ -133,7 +124,7 @@ const Home: NextPage = () => {
               <Controller>
                 <Box alignItems="center">
                   <Scene
-                    duration={windowHeight}
+                    duration={windowHeight / 2}
                     pin
                     // triggerElement=".trigger"
                     offset={185}
@@ -150,7 +141,6 @@ const Home: NextPage = () => {
                                     color={emphasisText}
                                   >
                                     ~/.hist
-
                                   </Text>
                                 </Flex>
                                 <Heading pl="50px" size="2xl" mr="0">[[ life && work ]] ; then</Heading>
@@ -169,7 +159,7 @@ const Home: NextPage = () => {
                                 opacity: 1,
                                 width: '100%',
                               }}
-                              // duration={0.1}
+                              duration={0.1}
                             />
                             <Tween
                               target={1}
@@ -177,15 +167,16 @@ const Home: NextPage = () => {
                                 overflow: 'hidden',
                                 height: 50,
                                 opacity: 0,
-                                width: 0,
+                                // width: 0,
                               }}
                               to={{
                                 overflow: 'hidden',
                                 height: 50,
                                 opacity: 1,
-                                width: '100%',
+                                // width: '100%',
                               }}
-                              ease={Power3.easeIn}
+                              // ease={Power3.easeIn}
+                              // duration={0.1}
                             />
                           </Timeline>
                         </Timeline>
@@ -193,7 +184,7 @@ const Home: NextPage = () => {
                     )}
                   </Scene>
                   <Scene
-                    duration={windowHeight}
+                    duration={windowHeight / 2}
                     pin
                     offset={155}
                   >
@@ -203,13 +194,15 @@ const Home: NextPage = () => {
                           <Timeline
                             target={(
                               <>
-                                <Flex flexDirection="column">
-                                  <Text
-                                    fontSize={{ base: '4xl', lg: '6xl' }}
-                                    color={emphasisText}
-                                  >
-                                    ~/.hist/.papercut
-                                  </Text>
+                                {/* <Flex flexDirection="column"> */}
+                                <Text
+                                  fontSize={{ base: '4xl', lg: '6xl' }}
+                                  color={emphasisText}
+                                  height={headingHeight}
+                                >
+                                  ~/.hist/.papercut
+                                </Text>
+                                <Box>
                                   <Heading pl="50px" size="xl">
                                     I'm currently working at
                                     {' '}
@@ -228,31 +221,49 @@ const Home: NextPage = () => {
                                     solutions and processes.
                                   </Heading>
                                   <Text pl="50px" fontSize={descText}>$ tech=(typescript golang bash automation)</Text>
-                                </Flex>
+                                  {/* </Flex> */}
+
+                                </Box>
                               </>
                             )}
                           >
                             <Tween
+                              target={0}
                               from={{
                                 overflow: 'hidden',
                                 opacity: 0,
                                 width: 0,
                               }}
+                              to={{
+                                overflow: 'hidden',
+                                opacity: 1,
+                                width: '100%',
+                              }}
+                              duration={0.1}
                             />
-                            <Tween to={{
-                              overflow: 'hidden',
-                              opacity: 1,
-                              width: '100%',
-                            }}
+
+                            <Tween
+                              target={1}
+                              from={{
+                                overflow: 'hidden',
+                                opacity: 0,
+
+                              }}
+                              to={{
+                                overflow: 'hidden',
+                                opacity: 1,
+
+                              }}
                             />
-                            <Tween to={{ opacity: 0 }} />
+
+                            {/* <Tween to={{ opacity: 0 }} /> */}
                           </Timeline>
                         </Timeline>
                       </Box>
                     )}
                   </Scene>
                   <Scene
-                    duration={windowHeight}
+                    duration={windowHeight / 2}
                     pin
                     offset={155}
                   >
@@ -262,13 +273,15 @@ const Home: NextPage = () => {
                           <Timeline
                             target={(
                               <>
-                                <Flex flexDirection="column">
-                                  <Text
-                                    fontSize={{ base: '4xl', lg: '6xl' }}
-                                    color={emphasisText}
-                                  >
-                                    ~/.hist/.anz
-                                  </Text>
+
+                                <Text
+                                  fontSize={{ base: '4xl', lg: '6xl' }}
+                                  color={emphasisText}
+                                  height={headingHeight}
+                                >
+                                  ~/.hist/.anz
+                                </Text>
+                                <Box>
                                   <Heading pl="50px" size="xl">
                                     I worked at
                                     {' '}
@@ -300,24 +313,38 @@ const Home: NextPage = () => {
                                     $ tech=(golang micro-services APIs
                                     gRPC gCloud pubsub serverless CLI)
                                   </Text>
-                                </Flex>
+                                </Box>
                               </>
                             )}
                           >
                             <Tween
+                              target={0}
                               from={{
                                 overflow: 'hidden',
                                 opacity: 0,
                                 width: 0,
                               }}
+                              to={{
+                                overflow: 'hidden',
+                                opacity: 1,
+                                width: '100%',
+                              }}
+                              duration={0.1}
                             />
-                            <Tween to={{
-                              overflow: 'hidden',
-                              opacity: 1,
-                              width: '100%',
-                            }}
+                            <Tween
+                              target={1}
+                              from={{
+                                overflow: 'hidden',
+                                opacity: 0,
+
+                              }}
+                              to={{
+                                overflow: 'hidden',
+                                opacity: 1,
+
+                              }}
                             />
-                            <Tween to={{ opacity: 0 }} />
+
                           </Timeline>
                         </Timeline>
                       </Box>
@@ -356,7 +383,7 @@ const Home: NextPage = () => {
                     )}
                   </Scene>
                   <Scene
-                    duration={windowHeight}
+                    duration={windowHeight / 2}
                     pin
                     offset={155}
                   >
@@ -370,6 +397,7 @@ const Home: NextPage = () => {
                                   <Text
                                     fontSize={{ base: '4xl', lg: '6xl' }}
                                     color={emphasisText}
+                                    height={headingHeight}
                                   >
                                     ~/.build
                                   </Text>
@@ -391,14 +419,14 @@ const Home: NextPage = () => {
                               width: '100%',
                             }}
                             />
-                            <Tween to={{ opacity: 0 }} />
+                            {/* <Tween to={{ opacity: 0 }} /> */}
                           </Timeline>
                         </Timeline>
                       </Box>
                     )}
                   </Scene>
                   <Scene
-                    duration={windowHeight}
+                    duration={windowHeight / 2}
                     pin
                     offset={155}
                   >
@@ -415,6 +443,7 @@ const Home: NextPage = () => {
                                   >
                                     ~/.contact
                                   </Text>
+                                  {/* <Box id="bottom" height="0px" /> */}
                                   <Flex height="55vh" bg="black" p="10" borderRadius="10px" flexDirection="column">
                                     <FormLabel color="#FF0066">~$ ./.contact</FormLabel>
                                     <form>
@@ -422,23 +451,50 @@ const Home: NextPage = () => {
                                         <FormLabel color={emphasisText}>
                                           ~$ What is your name?
                                         </FormLabel>
-                                        <Input color="white" _focus={{ color: '#FF0066' }} type="text" borderColor="transparent" />
+                                        <Input
+                                          color="white"
+                                          borderRadius="0"
+                                          borderBottom="1px"
+                                          borderColor="white"
+                                          _focus={{ color: '#FF0066' }}
+                                          type="text"
+                                          // borderColor="transparent"
+                                        />
                                       </FormControl>
-                                      <FormControl id="email">
+                                      <FormControl id="email" pt="15px">
                                         <FormLabel color={emphasisText}>
                                           ~$ What is your email?
                                         </FormLabel>
-                                        <Input color="white" _focus={{ color: '#FF0066' }} type="text" borderColor="transparent" />
+                                        <Input
+                                          color="white"
+                                          borderRadius="0"
+                                          borderBottom="1px"
+                                          borderColor="white"
+                                          _focus={{ color: '#FF0066' }}
+                                          type="text"
+                                          // borderColor="transparent"
+                                        />
                                       </FormControl>
-                                      <FormControl id="message">
+
+                                      <FormControl id="message" pt="15px">
                                         <FormLabel color={emphasisText}>
                                           ~$ What do you want to say?
                                         </FormLabel>
-                                        <Textarea color="white" _focus={{ color: '#FF0066' }} resize="none" rows={8} cols={80} type="text" borderColor="transparent" />
+                                        <Textarea
+                                          color="white"
+                                          _focus={{ color: '#FF0066' }}
+                                          resize="none"
+                                          rows={8}
+                                          cols={80}
+                                          type="text"
+                                          borderColor="white"
+                                          borderRadius="0px"
+                                        />
                                       </FormControl>
                                     </form>
                                   </Flex>
                                 </Flex>
+
                               </>
                             )}
                           >
@@ -449,23 +505,22 @@ const Home: NextPage = () => {
                                 width: 0,
                               }}
                             />
-                            <Tween to={{
-                              overflow: 'hidden',
-                              opacity: 1,
-                              width: '100%',
-                            }}
+                            <Tween
+                              to={{
+                                overflow: 'hidden',
+                                opacity: 1,
+                                width: '100%',
+                              }}
                             />
-                            <Tween to={{ opacity: 0 }} />
                           </Timeline>
                         </Timeline>
                       </Box>
                     )}
                   </Scene>
-                  {/* <Scene duration="80" pin>
-                    <Box id="bottom" />
-                  </Scene> */}
+
                 </Box>
               </Controller>
+
             </Box>
           </Flex>
         </Container>
