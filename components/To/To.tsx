@@ -5,6 +5,7 @@ import {
   LinkOverlay,
   Text,
 } from '@chakra-ui/react';
+import { mode } from '@chakra-ui/theme-tools';
 import { useRouter } from 'next/router';
 
 declare type Props = {
@@ -14,7 +15,7 @@ declare type Props = {
 
 export const To = ({ name, to } : Props) : JSX.Element => {
   const router = useRouter();
-  const color = router.pathname === `/${to}` ? '#FF0066' : '#FFFFFF99';
+  const color = router.pathname === `/${to}` ? '#FF0066' : mode('black', 'white');
   return (
     <>
       <LinkBox>
