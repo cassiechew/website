@@ -28,7 +28,7 @@ export const DarkModeToggle = () : JSX.Element => {
   ));
 
   return (
-    <LinkBox onClick={toggleColorMode}>
+    <LinkBox cursor="pointer" onClick={toggleColorMode}>
       {colorText()}
     </LinkBox>
   );
