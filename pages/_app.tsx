@@ -12,8 +12,10 @@ function MyApp({ Component, pageProps }: AppProps) : JSX.Element {
         heading: 'monospace',
         body: 'monospace',
       },
-      initialColorMode: 'dark',
-      useSystemColorMode: true,
+      config: {
+        initialColorMode: 'dark',
+        useSystemColorMode: true,
+      },
       styles: {
         global: (props: Dict<never> | StyleFunctionProps) => ({
           body: {
