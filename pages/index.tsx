@@ -21,8 +21,6 @@ import {
   Tween, Timeline,
 } from 'react-gsap';
 
-import { Power3 } from 'gsap';
-
 import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
 // import To from '../components/To';
