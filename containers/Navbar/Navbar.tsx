@@ -3,6 +3,7 @@
 import {
   Flex, Text,
 } from '@chakra-ui/react';
+
 import DarkModeToggle from '../../components/DarkModeToggle';
 import To from '../../components/To';
 
@@ -30,14 +31,12 @@ export const Navbar = () : JSX.Element => (
       pt={9}
       width="100%"
     >
-
       <To name="~$ me" to="" />
       <To name="--work" to="resume" />
       <To name="--blog" to="blog" />
       <To name="--git" to="github" />
       <DarkModeToggle />
     </Flex>
-
   </Flex>
 
 );
