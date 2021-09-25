@@ -125,7 +125,7 @@ const Home: NextPage = () => {
                     duration={windowHeight / 2}
                     pin
                     // triggerElement=".trigger"
-                    offset={185}
+                    offset={155}
                   >
                     {(progress: number | undefined) => (
                       <Box alignItems="center">
@@ -484,14 +484,12 @@ const Home: NextPage = () => {
                               from={{
                                 overflow: 'hidden',
                                 opacity: 0,
-                                width: '0%',
                               }}
                             />
                             <Tween
                               to={{
                                 overflow: 'hidden',
                                 opacity: 1,
-                                width: '100%',
                               }}
                             />
                           </Timeline>
