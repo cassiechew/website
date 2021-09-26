@@ -1,5 +1,5 @@
 import { Flex } from '@chakra-ui/react';
-import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons';
+import { ChevronUpIcon } from '@chakra-ui/icons';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import { useState } from 'react';
 
