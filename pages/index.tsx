@@ -31,12 +31,12 @@ const Home: NextPage = () => {
         ml={{
           base: '5',
           sm: '50',
-          md: '150',
+          md: '100',
           lg: '300',
         }}
         justifyContent="center"
       >
-        <Flex width={{ base: '100vw', lg: '60vw' }} justifyContent="center" flexDirection="column">
+        <Flex width={{ base: '99vw', lg: '60vw' }} justifyContent="center" flexDirection="column">
           {AutoScroll()}
           <Box alignItems="center">
             {IntroScene({ windowHeight })}

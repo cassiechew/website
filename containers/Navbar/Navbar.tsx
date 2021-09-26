@@ -19,6 +19,7 @@ export const Navbar = () : JSX.Element => (
       <Text pr="50px" color="#FF0066" fontSize="2xl">~</Text>
     </Flex>
     <Flex
+      flexDirection={{ base: 'column', lg: 'row' }}
       height="6"
       alignItems="center"
       justifyContent="right"
