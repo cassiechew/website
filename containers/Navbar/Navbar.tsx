@@ -26,7 +26,7 @@ export const Navbar = () : JSX.Element => (
       width="100%"
     >
       <To name="~$ me" to="" />
-      <To name="--work" to="resume" />
+      <To name="--projects" to="projects" />
       <To name="--blog" to="blog" />
       <To name="--git" to="github" />
       <DarkModeToggle />
