@@ -11,7 +11,7 @@ import {
   HeadingText,
   HeadingHeight,
   EmphasisText,
-  BodyText,
+  DescText,
 } from '../../../constants/constants';
 
 export const IntroScene = ({ windowHeight }: SceneProps) : JSX.Element => {
@@ -60,7 +60,13 @@ export const IntroScene = ({ windowHeight }: SceneProps) : JSX.Element => {
       </Flex>
       {' '}
       <Heading pl="50px" size="2xl">Hi! I'm Cassie.</Heading>
-      <Text pl="50px" fontSize={BodyText}>Full Stack Engineer | Linguist | Occasional Gamer</Text>
+      <Text pl="50px" fontSize={DescText}>
+        Full Stack Engineer | Linguist | Singer
+      </Text>
+      <Text pl="50px" fontSize={DescText}>
+        {' '}
+        Occasional Gamer | Full Time Learner
+      </Text>
     </Box>
   );
 };
