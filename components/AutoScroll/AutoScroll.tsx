@@ -4,18 +4,15 @@ import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import { useState } from 'react';
 
 export const AutoScroll = (): JSX.Element => {
-  const [chevron, setChevron] = useState(<ChevronDownIcon
-    position="fixed"
-    anchor="left"
-    bottom="5vh"
-    h={8}
-    w={8}
-  />);
+  const [chevron, setChevron] = useState(<></>);
 
   useScrollPosition(({ currPos }) => {
     if (currPos.y < 0) {
       setChevron(
         <ChevronUpIcon
+          position="fixed"
+          anchor="left"
+          bottom="5vh"
           h={8}
           w={8}
         />,
@@ -26,9 +23,6 @@ export const AutoScroll = (): JSX.Element => {
   });
   return (
     <Flex
-      position="fixed"
-      anchor="left"
-      bottom="5vh"
       justifyContent="right"
     >
       <button
