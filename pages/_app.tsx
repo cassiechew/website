@@ -22,6 +22,9 @@ function MyApp({ Component, pageProps }: AppProps) : JSX.Element {
           body: {
             bg: mode('white', 'black')(props),
           },
+          html: {
+            overflowY: 'scroll',
+          },
           '::-webkit-scrollbar-track': {
             background: mode('white', 'black')(props),
           },
