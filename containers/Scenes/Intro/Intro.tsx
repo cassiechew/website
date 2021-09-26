@@ -61,11 +61,7 @@ export const IntroScene = ({ windowHeight }: SceneProps) : JSX.Element => {
       {' '}
       <Heading pl="50px" size="2xl">Hi! I'm Cassie.</Heading>
       <Text pl="50px" fontSize={DescText}>
-        Full Stack Engineer | Linguist | Singer
-      </Text>
-      <Text pl="50px" fontSize={DescText}>
-        {' '}
-        Occasional Gamer | Full Time Learner
+        Full Stack Engineer | Linguist | Singer | Occasional Gamer | Full Time Learner
       </Text>
     </Box>
   );
