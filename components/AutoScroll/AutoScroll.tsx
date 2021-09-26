@@ -16,9 +16,6 @@ export const AutoScroll = (): JSX.Element => {
     if (currPos.y < 0) {
       setChevron(
         <ChevronUpIcon
-          position="fixed"
-          anchor="left"
-          bottom="5vh"
           h={8}
           w={8}
         />,
@@ -29,6 +26,9 @@ export const AutoScroll = (): JSX.Element => {
   });
   return (
     <Flex
+      position="fixed"
+      anchor="left"
+      bottom="5vh"
       justifyContent="right"
     >
       <button
