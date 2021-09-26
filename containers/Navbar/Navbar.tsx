@@ -7,18 +7,12 @@ import {
 import DarkModeToggle from '../../components/DarkModeToggle';
 import To from '../../components/To';
 
-// import Bar from '../../components/Bar';
-
-// declare type Props = {
-//     id: string,
-// }
-
 export const Navbar = () : JSX.Element => (
   <Flex flexDirection="row" width="100%">
     <Flex
       height="6"
       alignItems="center"
-      justifyContent="right"
+      justifyContent="left"
       pt={9}
       pl="50px"
     >
