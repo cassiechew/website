@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import type { AppProps } from 'next/app';
-import { ChakraProvider, extendTheme, Slide } from '@chakra-ui/react';
+import { ChakraProvider, extendTheme, Fade } from '@chakra-ui/react';
 import { mode, StyleFunctionProps } from '@chakra-ui/theme-tools';
 import { Dict } from '@chakra-ui/utils';
 import { useRouter } from 'next/router';
@@ -30,7 +30,7 @@ function MyApp({ Component, pageProps }: AppProps) : JSX.Element {
           },
           '::-webkit-scrollbar-thumb': {
             background: '#F06D',
-            'border-radius': '5px',
+            borderRadius: '5px',
           },
           '::-webkit-scrollbar-thumb:hover': {
             background: '#555',
@@ -39,13 +39,13 @@ function MyApp({ Component, pageProps }: AppProps) : JSX.Element {
       },
     })}
     >
-      <Slide
+      <Fade
         key={router.route}
         // initialScale={0.9}
         in
       >
         <Component {...pageProps} />
-      </Slide>
+      </Fade>
     </ChakraProvider>
   );
 }
