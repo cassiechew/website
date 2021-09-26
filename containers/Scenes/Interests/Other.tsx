@@ -7,6 +7,7 @@ import { Scene } from 'react-scrollmagic';
 import {
   Tween, Timeline,
 } from 'react-gsap';
+import { Power3 } from 'gsap';
 
 import {
   HeadingText,
@@ -80,6 +81,7 @@ export const Other = ({ windowHeight }: SceneProps) : JSX.Element => (
                 overflow: 'hidden',
                 opacity: 1,
               }}
+              ease={Power3.easeOut}
             />
           </Timeline>
         </Timeline>
