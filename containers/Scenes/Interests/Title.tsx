@@ -1,24 +1,25 @@
 import {
-  Flex,
+  Heading,
   Text,
   Box,
+  Flex,
 } from '@chakra-ui/react';
 import { Scene } from 'react-scrollmagic';
 import {
   Tween, Timeline,
 } from 'react-gsap';
 
-import ContactForm from '../../ContactForm';
 import {
   HeadingText,
+  HeadingHeight,
   EmphasisText,
 } from '../../../constants/constants';
 
-export const ContactScene = ({ windowHeight }: SceneProps) : JSX.Element => (
+export const Title = ({ windowHeight }: SceneProps) : JSX.Element => (
   <Scene
     duration={windowHeight / 2}
     pin
-    offset={315}
+    offset={155}
   >
     {(progress: number | undefined) => (
       <Box alignItems="center">
@@ -26,25 +27,44 @@ export const ContactScene = ({ windowHeight }: SceneProps) : JSX.Element => (
           <Timeline
             target={(
               <>
-                <Flex flexDirection="column">
+                <Flex flexDirection="row" overflow="hidden" height={HeadingHeight}>
                   <Text
                     fontSize={HeadingText}
                     color={EmphasisText}
                   >
-                    ~/.contact
+                    ~/.profile
                   </Text>
-                  <ContactForm emphasisText={EmphasisText} />
                 </Flex>
+                <Heading pl="50px" size="xl">
+                  do
+                  {' { '}
+                  <Text display="inline" color={EmphasisText}>$interests</Text>
+                  {' } '}
+                  done
+                </Heading>
               </>
-            )}
+                )}
           >
             <Tween
+              target={0}
+              from={{
+                overflow: 'hidden',
+                opacity: 0,
+                width: 0,
+              }}
+              to={{
+                overflow: 'hidden',
+                opacity: 1,
+                width: '100%',
+              }}
+              duration={0.1}
+            />
+            <Tween
+              target={1}
               from={{
                 overflow: 'hidden',
                 opacity: 0,
               }}
-            />
-            <Tween
               to={{
                 overflow: 'hidden',
                 opacity: 1,
