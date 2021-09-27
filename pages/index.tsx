@@ -36,7 +36,6 @@ const Home: NextPage = () => {
   return (
     <Flex flexDirection="column" height="screen" width="100%" justifyContent="center">
       <Header />
-      <Navbar width={width} />
       <Container
         ml={{
           base: '5px', sm: '5%', md: '15%', lg: '20%', '2xl': '30%',
@@ -52,6 +51,8 @@ const Home: NextPage = () => {
           </Box>
         </Flex>
       </Container>
+      <Navbar width={width} />
+
     </Flex>
   );
 };

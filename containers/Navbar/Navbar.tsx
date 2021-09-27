@@ -64,6 +64,8 @@ export const Navbar = ({ width } : Props) : JSX.Element => {
           id="mobile-nav-button"
           zIndex={1000}
           onClick={onToggle}
+          position="absolute"
+          top="2vh"
         >
           <HamburgerIcon userSelect="none" h={8} w={8} />
         </Button>
@@ -71,15 +73,37 @@ export const Navbar = ({ width } : Props) : JSX.Element => {
       <Slide in={isOpen}>
         <Box
           color="white"
-          bg="#FF0066"
           height="150vh"
+          width="100vh"
+          // backgroundImage="linear-gradient(to left, #FF0066, #F060)"
+          justifyContent="right"
+          pl="30%"
+          zIndex="1000 !important"
         >
-          <Box pt="100px" pl="20px">
-            <To name="Me" to="" activeColor="white" inactiveColor="white" />
-            <To name="Projects" to="projects" activeColor="white" inactiveColor="white" />
-            <To name="Blog" to="blog" activeColor="white" inactiveColor="white" />
-            <To name="Git" to="github" activeColor="white" inactiveColor="white" />
-            <DarkModeToggle inactiveColor="white" upper />
+          <Box
+            color="white"
+            bg="#FF0066"
+            // backgroundImage="linear-gradient(to left, #FF0066, #FF0066FF)"
+            height="150vh"
+            width="70%"
+            justifyContent="right"
+            zIndex="1001 !important"
+          >
+            <Box
+              zIndex="1002 !important"
+              pt="20%"
+              pl="20px"
+            >
+              <To name="Me" to="" activeColor="white" inactiveColor="white" />
+              <br />
+              <To name="Projects" to="projects" activeColor="white" inactiveColor="white" />
+              <br />
+              <To name="Blog" to="blog" activeColor="white" inactiveColor="white" />
+              <br />
+              <To name="Git" to="github" activeColor="white" inactiveColor="white" />
+              <br />
+              <DarkModeToggle inactiveColor="white" upper />
+            </Box>
           </Box>
         </Box>
       </Slide>
