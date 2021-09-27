@@ -19,7 +19,7 @@ const Github: NextPage = () => {
         <Heading>
           Going to github
           {' '}
-          {'--->'}
+          {'->'}
         </Heading>
       </Flex>
     </Flex>

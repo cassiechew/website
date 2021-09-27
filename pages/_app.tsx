@@ -19,6 +19,12 @@ function MyApp({ Component, pageProps }: AppProps) : JSX.Element {
       },
       styles: {
         global: (props: Dict<never> | StyleFunctionProps) => ({
+          To: {
+            '-webkit-tap-highlight-color': '#FFF0',
+          },
+          '#mobile-nav-button': {
+            bg: 'transparent',
+          },
           body: {
             bg: mode('white', 'black')(props),
           },
@@ -42,13 +48,7 @@ function MyApp({ Component, pageProps }: AppProps) : JSX.Element {
       },
     })}
     >
-      <Fade
-        key={router.route}
-        // initialScale={0.9}
-        in
-      >
-        <Component {...pageProps} />
-      </Fade>
+      <Component {...pageProps} />
     </ChakraProvider>
   );
 }

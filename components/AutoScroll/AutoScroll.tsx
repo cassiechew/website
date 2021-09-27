@@ -13,6 +13,7 @@ export const AutoScroll = (): JSX.Element => {
           position="fixed"
           anchor="left"
           bottom="5vh"
+          right="5vw"
           h={8}
           w={8}
         />,
@@ -21,6 +22,7 @@ export const AutoScroll = (): JSX.Element => {
       setChevron(<></>);
     }
   });
+
   return (
     <Flex
       justifyContent="right"

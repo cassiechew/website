@@ -8,19 +8,24 @@ import {
 // import { mode } from '@chakra-ui/theme-tools';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import { EmphasisText } from '../../constants/constants';
 
 declare type Props = {
     name : string,
-    to: string
+    to: string,
+    inactiveColor: string,
+    activeColor?: string,
 }
 
-export const To = ({ name, to } : Props) : JSX.Element => {
+export const To = ({
+  name, to, inactiveColor, activeColor,
+} : Props) : JSX.Element => {
   const router = useRouter();
 
   const color = router.pathname === `/${to}` ? (
     <Text
       pr="50px"
-      color="#FF0066"
+      color={activeColor}
       fontSize="2xl"
       font="monospace"
     >
@@ -28,8 +33,9 @@ export const To = ({ name, to } : Props) : JSX.Element => {
     </Text>
   ) : (
     <Text
+      className=""
       pr="50px"
-      color="gray.500"
+      color={inactiveColor}
       fontSize="2xl"
       font="monospace"
     >
@@ -51,4 +57,8 @@ export const To = ({ name, to } : Props) : JSX.Element => {
       </LinkBox>
     </>
   );
+};
+
+To.defaultProps = {
+  activeColor: EmphasisText,
 };

@@ -19,7 +19,7 @@ const Blog: NextPage = () => {
         <Heading>
           Going to my blog!
           {' '}
-          {'--->'}
+          {'->'}
         </Heading>
       </Flex>
     </Flex>
