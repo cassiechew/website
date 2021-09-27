@@ -7,7 +7,7 @@ import Header from '../components/Header';
 import Navbar from '../containers/Navbar';
 
 const Projects: NextPage = () => {
-  const [windowHeight, setWindowHeight] = useState(0);
+  // const [windowHeight, setWindowHeight] = useState(0);
   const [width, setWindowWidth] = useState(0);
 
   const updateDimensions = (): void => {
@@ -15,7 +15,7 @@ const Projects: NextPage = () => {
   };
 
   useEffect(() => {
-    setWindowHeight(visualViewport.height);
+    // setWindowHeight(visualViewport.height);
     setWindowWidth(visualViewport.width);
     updateDimensions();
 
