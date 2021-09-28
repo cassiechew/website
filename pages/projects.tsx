@@ -58,7 +58,7 @@ const Projects: NextPage = () => {
       <Flex justifyContent="center" alignItems="center" height="80vh">
         <Heading>Under Construction</Heading>
       </Flex>
-      <Navbar drawerProps={{ isOpen }} width={width} />
+      <Navbar drawerProps={{ isOpen, onToggle }} width={width} />
     </Flex>
   );
 };
