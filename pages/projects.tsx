@@ -1,6 +1,12 @@
 import type { NextPage } from 'next';
 
-import { Flex, Heading } from '@chakra-ui/react';
+import {
+  Flex,
+  Heading,
+  Button,
+  useDisclosure,
+} from '@chakra-ui/react';
+import { HamburgerIcon } from '@chakra-ui/icons';
 import { useEffect, useState } from 'react';
 
 import Header from '../components/Header';
@@ -9,6 +15,7 @@ import Navbar from '../containers/Navbar';
 const Projects: NextPage = () => {
   // const [windowHeight, setWindowHeight] = useState(0);
   const [width, setWindowWidth] = useState(0);
+  const { isOpen, onToggle } = useDisclosure();
 
   const updateDimensions = (): void => {
     setWindowWidth(window.innerWidth);
@@ -26,10 +33,32 @@ const Projects: NextPage = () => {
   return (
     <Flex width="100%" flexDirection="column">
       <Header />
-      <Navbar width={width} />
+      <Flex
+        anchor="right"
+        pt="3vh"
+        pl="90vw"
+      >
+        {() => {
+          if (width < 1023) {
+            return (
+              <Button
+                userSelect="none"
+                _focus={{ outline: 'none' }}
+                id="mobile-nav-button"
+                onClick={onToggle}
+                position="absolute"
+                top="3vh"
+              >
+                <HamburgerIcon userSelect="none" h={8} w={8} />
+              </Button>
+            );
+          } return <></>;
+        }}
+      </Flex>
       <Flex justifyContent="center" alignItems="center" height="80vh">
         <Heading>Under Construction</Heading>
       </Flex>
+      <Navbar drawerProps={{ isOpen }} width={width} />
     </Flex>
   );
 };

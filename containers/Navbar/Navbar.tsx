@@ -5,81 +5,71 @@ import {
   Box,
   Slide,
   Text,
-  Button,
-  useDisclosure,
 } from '@chakra-ui/react';
-import {
-  HamburgerIcon,
-} from '@chakra-ui/icons';
 
 import DarkModeToggle from '../../components/DarkModeToggle';
 import To from '../../components/To';
 
 declare type Props = {
   width: number
+  drawerProps: {
+    isOpen: boolean,
+    onToggle: () => void
+  }
 }
 
-export const Navbar = ({ width } : Props) : JSX.Element => {
-  const { isOpen, onToggle } = useDisclosure();
-
+export const Navbar = ({ width, drawerProps } : Props) : JSX.Element => {
   if (width > 1023) {
     return (
-      <Flex flexDirection="row" width="100%">
-        <Flex
-          height="6"
-          alignItems="center"
-          justifyContent="left"
-          pt={9}
-          pl="50px"
-        >
-          <Text pr="50px" color="#FF0066" fontSize="2xl">~</Text>
+      <Box position="absolute" top="1">
+        <Flex flexDirection="row" width="98vw">
+          <Flex
+            height="6"
+            alignItems="center"
+            justifyContent="left"
+            pt={9}
+            pl="50px"
+            width="10%"
+          >
+            <Text pr="50px" color="#FF0066" fontSize="2xl">~</Text>
+          </Flex>
+          <Flex
+            flexDirection="row"
+            height="6"
+            alignItems="center"
+            justifyContent="right"
+            pt={9}
+            width="100%"
+          >
+            <To name="~$ me" to="" inactiveColor="gray.500" />
+            <To name="--projects" to="projects" inactiveColor="gray.500" />
+            <To name="--blog" to="blog" inactiveColor="gray.500" />
+            <To name="--git" to="github" inactiveColor="gray.500" />
+            <DarkModeToggle inactiveColor="gray.500" prefix="--" />
+          </Flex>
         </Flex>
-        <Flex
-          flexDirection={{ base: 'column', lg: 'row' }}
-          height="6"
-          alignItems="center"
-          justifyContent="right"
-          pt={9}
-          width="100%"
-        >
-          <To name="~$ me" to="" inactiveColor="gray.500" />
-          <To name="--projects" to="projects" inactiveColor="gray.500" />
-          <To name="--blog" to="blog" inactiveColor="gray.500" />
-          <To name="--git" to="github" inactiveColor="gray.500" />
-          <DarkModeToggle inactiveColor="gray.500" prefix="--" />
-        </Flex>
-      </Flex>
+      </Box>
     );
   }
+  // TODO: Add close button. or close on tap end button
   return (
     <>
-      <Flex
-        anchor="right"
-        pt="3vh"
-        pl="90vw"
-      >
-        <Button
-          userSelect="none"
-          _focus={{ outline: 'none' }}
-          id="mobile-nav-button"
-          zIndex={1000}
-          onClick={onToggle}
-          position="absolute"
-          top="2vh"
-        >
-          <HamburgerIcon userSelect="none" h={8} w={8} />
-        </Button>
-      </Flex>
-      <Slide in={isOpen}>
-        <Box
-          color="white"
+      <Slide in={drawerProps.isOpen}>
+        <Flex
           height="150vh"
-          width="100vh"
+          width="100%"
           // backgroundImage="linear-gradient(to left, #FF0066, #F060)"
           justifyContent="right"
-          pl="30%"
-          zIndex="1000 !important"
+          // ml="30vw"
+          flexDirection="row"
         >
+          <Box
+            width="30%"
+            height="100%"
+            onClick={() => {
+              drawerProps.onToggle();
+            }}
+          />
           <Box
             color="white"
             bg="#FF0066"
@@ -87,7 +77,7 @@ export const Navbar = ({ width } : Props) : JSX.Element => {
             height="150vh"
             width="70%"
             justifyContent="right"
-            zIndex="1001 !important"
+            // ml="30%"
           >
             <Box
               zIndex="1002 !important"
@@ -105,7 +95,7 @@ export const Navbar = ({ width } : Props) : JSX.Element => {
               <DarkModeToggle inactiveColor="white" upper />
             </Box>
           </Box>
-        </Box>
+        </Flex>
       </Slide>
     </>
   );

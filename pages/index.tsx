@@ -5,7 +5,12 @@ import {
   Flex,
   Container,
   Box,
+  useDisclosure,
+  Button,
 } from '@chakra-ui/react';
+import {
+  HamburgerIcon,
+} from '@chakra-ui/icons';
 
 import React, {
   useEffect, useState,
@@ -19,6 +24,24 @@ import { AutoScroll } from '../components/AutoScroll/AutoScroll';
 const Home: NextPage = () => {
   const [windowHeight, setWindowHeight] = useState(0);
   const [width, setWindowWidth] = useState(0);
+  const { isOpen, onToggle } = useDisclosure();
+
+  const mobileMenuToggleButton = (): JSX.Element => {
+    if (width < 1023) {
+      return (
+        <Button
+          userSelect="none"
+          _focus={{ outline: 'none' }}
+          id="mobile-nav-button"
+          onClick={onToggle}
+          position="absolute"
+          top="3vh"
+        >
+          <HamburgerIcon userSelect="none" h={8} w={8} />
+        </Button>
+      );
+    } return <></>;
+  };
 
   const updateDimensions = (): void => {
     setWindowWidth(window.innerWidth);
@@ -36,6 +59,13 @@ const Home: NextPage = () => {
   return (
     <Flex flexDirection="column" height="screen" width="100%" justifyContent="center">
       <Header />
+      <Flex
+        anchor="right"
+        pt="3vh"
+        pl="90vw"
+      >
+        {mobileMenuToggleButton()}
+      </Flex>
       <Container
         ml={{
           base: '5px', sm: '5%', md: '15%', lg: '20%', '2xl': '30%',
@@ -51,8 +81,7 @@ const Home: NextPage = () => {
           </Box>
         </Flex>
       </Container>
-      <Navbar width={width} />
-
+      <Navbar width={width} drawerProps={{ isOpen, onToggle }} />
     </Flex>
   );
 };
