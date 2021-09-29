@@ -1,5 +1,6 @@
 // Containers/Navbar/index.ts
 
-import { Navbar } from './Navbar';
+import { DesktopNav } from './Web/Navbar';
+import { MobileNav } from './Mobile/MobileNavDrawer';
 
-export default Navbar;
+export default { DesktopNav, MobileNav };

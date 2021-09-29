@@ -24,8 +24,7 @@ export const DarkModeToggle = ({ upper = false, inactiveColor, prefix } : props)
       userSelect="none"
     >
       {prefix}
-      {capitalizeFirstLetter('dark', upper)}
-&nbsp;
+      {capitalizeFirstLetter('light', upper)}
     </Text>
   ) : (
     <Text
@@ -36,7 +35,8 @@ export const DarkModeToggle = ({ upper = false, inactiveColor, prefix } : props)
       userSelect="none"
     >
       {prefix}
-      {capitalizeFirstLetter('light', upper)}
+      {capitalizeFirstLetter('dark', upper)}
+      &nbsp;
     </Text>
   ));
 
