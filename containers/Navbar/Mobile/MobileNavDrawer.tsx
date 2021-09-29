@@ -3,7 +3,6 @@ import {
   Box,
   Slide,
 } from '@chakra-ui/react';
-import { constants } from 'buffer';
 
 import DarkModeToggle from '../../../components/DarkModeToggle';
 import MobileMenuToggleButton from '../../../components/MobileMenuToggleButton';
