@@ -41,10 +41,11 @@ export const Law = ({ windowHeight }: SceneProps) : JSX.Element => (
                     {' '}
                     <Text display="inline" color={EmphasisText}>$Law</Text>
                     {' '}
-                    and getting a
+                    in 2022 and striving to get a
                     {' '}
                     <Text display="inline" color={EmphasisText}>$JD</Text>
-                    in 2022!
+                    {' '}
+                    in 2026!
                   </Heading>
                 </Box>
               </>
