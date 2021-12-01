@@ -38,7 +38,6 @@ const Projects: NextPage = () => {
       </Flex>
       <MobileNav width={width} isOpen={isOpen} onToggle={onToggle} />
       <AutoScroll />
-
     </Flex>
   );
 };
