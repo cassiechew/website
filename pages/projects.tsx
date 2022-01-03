@@ -43,6 +43,7 @@ const Projects: NextPage = () => {
           <Flex
             flexDirection="column"
             marginTop="20vh"
+            marginBottom="20px"
             borderWidth="1px"
             padding="20px"
             width="70vw"
@@ -66,7 +67,7 @@ const Projects: NextPage = () => {
           </Flex>
           <Flex
             flexDirection="column"
-            marginTop="20px"
+            marginBottom="25px"
             borderWidth="1px"
             padding="20px"
             width="70vw"
@@ -105,7 +106,7 @@ const Projects: NextPage = () => {
           </Flex>
           <Flex
             flexDirection="column"
-            marginTop="20px"
+            marginBottom="25px"
             borderWidth="1px"
             padding="20px"
             width="70vw"
@@ -121,6 +122,32 @@ const Projects: NextPage = () => {
               {' '}
               <a
                 href="https://github.com/cassiechew/rss-reader"
+                target="_blank"
+                rel="noreferrer"
+                style={{
+                  color: '#FF0066',
+                }}
+              >
+                here
+              </a>
+            </Text>
+          </Flex>
+          <Flex
+            flexDirection="column"
+            marginBottom="25px"
+            borderWidth="1px"
+            padding="20px"
+            width="70vw"
+          >
+            <Heading size="xl">Notion iCal integration</Heading>
+            <Text>
+              A small, simple overkill server to push iCal data into a notion calendar.
+            </Text>
+            <Text>
+              Repo:
+              {' '}
+              <a
+                href="https://github.com/cassiechew/notion-ical-integration"
                 target="_blank"
                 rel="noreferrer"
                 style={{
