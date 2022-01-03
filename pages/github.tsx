@@ -17,9 +17,9 @@ const Github: NextPage = () => {
       <Header />
       <Flex justifyContent="center" alignItems="center" height="90vh">
         <Heading>
+          {' '}
           Going to github
           {' '}
-          {'->'}
         </Heading>
       </Flex>
     </Flex>
