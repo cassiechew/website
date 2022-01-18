@@ -45,7 +45,7 @@ export const Law = ({ windowHeight }: SceneProps) : JSX.Element => (
                     {' '}
                     <Text display="inline" color={EmphasisText}>$JD</Text>
                     {' '}
-                    in 2026!
+                    in 2025!
                   </Heading>
                 </Box>
               </>
