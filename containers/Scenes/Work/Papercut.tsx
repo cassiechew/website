@@ -37,7 +37,7 @@ export const Papercut = ({ windowHeight }: SceneProps) : JSX.Element => (
                 </Text>
                 <Box>
                   <Heading pl="50px" size="xl">
-                    I'm currently working at
+                    I'm worked at
                     {' '}
                     <Text display="inline" color={EmphasisText}>$papercut_software</Text>
                     {' '}
@@ -53,7 +53,7 @@ export const Papercut = ({ windowHeight }: SceneProps) : JSX.Element => (
                     {' '}
                     solutions and processes.
                   </Heading>
-                  <Text pl="50px" fontSize={DescText}>$ tech=(typescript golang bash automation)</Text>
+                  <Text pl="50px" fontSize={DescText}>$ tech=(typescript vue golang bash automation)</Text>
                 </Box>
               </>
                 )}
