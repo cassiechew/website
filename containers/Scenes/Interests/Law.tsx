@@ -37,11 +37,11 @@ export const Law = ({ windowHeight }: SceneProps) : JSX.Element => (
                 </Text>
                 <Box>
                   <Heading pl="50px" size="xl">
-                    I will be studying
+                    I am studying
                     {' '}
                     <Text display="inline" color={EmphasisText}>$Law</Text>
                     {' '}
-                    in 2022 and striving to get a
+                    and am striving to get a
                     {' '}
                     <Text display="inline" color={EmphasisText}>$JD</Text>
                     {' '}
