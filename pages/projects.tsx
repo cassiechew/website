@@ -2,9 +2,7 @@ import type { NextPage } from 'next';
 
 import {
   Flex,
-  Heading,
   useDisclosure,
-  Text,
 } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 
