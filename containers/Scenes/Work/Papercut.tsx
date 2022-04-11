@@ -37,7 +37,7 @@ export const Papercut = ({ windowHeight }: SceneProps) : JSX.Element => (
                 </Text>
                 <Box>
                   <Heading pl="50px" size="xl">
-                    I'm worked at
+                    I worked at
                     {' '}
                     <Text display="inline" color={EmphasisText}>$papercut_software</Text>
                     {' '}
