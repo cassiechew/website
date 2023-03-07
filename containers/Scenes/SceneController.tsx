@@ -14,7 +14,7 @@ const SceneController = ({ windowHeight }: SceneProps): JSX.Element => (
       {WorkScenes({ windowHeight })}
       {InterestScenes({ windowHeight })}
       {BuildScene({ windowHeight })}
-      {ThanksScene({ windowHeight })}
+      {ThanksScene({ windowHeight: windowHeight * 1.5 })}
       {/* {ContactScene({ windowHeight })} */}
     </Box>
   </Controller>
