@@ -41,7 +41,7 @@ const Projects: NextPage = () => {
         height="80vh"
         ml="15vw"
       >
-        <Flex flexDirection="column">
+        <Flex flexDirection="column" marginBottom="12">
           <ThisWebsite />
           <Zefr />
           <RssReader />
