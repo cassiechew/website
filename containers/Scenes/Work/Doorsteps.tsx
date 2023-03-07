@@ -55,7 +55,7 @@ export const Doorsteps = ({ windowHeight }: SceneProps) : JSX.Element => (
                     >
                       Building
                     </Text>
-                    ,
+                    , and
                     {' '}
                     <Text
                       display="inline"
@@ -63,6 +63,7 @@ export const Doorsteps = ({ windowHeight }: SceneProps) : JSX.Element => (
                     >
                       Maintaining
                     </Text>
+                    {' '}
                     websites and web applications.
                   </Heading>
                   <Text
