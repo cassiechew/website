@@ -1,7 +1,7 @@
 import { Box } from '@chakra-ui/react';
 import { Controller } from 'react-scrollmagic';
 
-import { ContactScene } from './Contact/Contact';
+// import { ContactScene } from './Contact/Contact';
 import { BuildScene } from './Build/Build';
 import { WorkScenes } from './Work/Work';
 import { IntroScene } from './Intro/Intro';
@@ -15,7 +15,7 @@ const SceneController = ({ windowHeight }: SceneProps): JSX.Element => (
       {InterestScenes({ windowHeight })}
       {BuildScene({ windowHeight })}
       {ThanksScene({ windowHeight })}
-      {ContactScene({ windowHeight })}
+      {/* {ContactScene({ windowHeight })} */}
     </Box>
   </Controller>
 );
