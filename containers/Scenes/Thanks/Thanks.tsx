@@ -50,7 +50,7 @@ export const ThanksScene = ({ windowHeight }: SceneProps) : JSX.Element => (
                     pl="50px"
                     fontSize={DescText}
                   >
-                    # If you wish to contact me, please submit via the form below.
+                    # I hope you have a wonderful day!
                   </Text>
                 </Box>
               </>
