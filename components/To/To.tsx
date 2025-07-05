@@ -11,48 +11,45 @@ import Link from 'next/link';
 import { EmphasisText } from '../../constants/constants';
 
 declare type Props = {
-    name : string,
-    to: string,
-    inactiveColor: string,
-    activeColor?: string,
-}
+  name: string;
+  to: string;
+  inactiveColor: string;
+  activeColor?: string;
+};
 
 export const To = ({
-  name, to, inactiveColor, activeColor,
-} : Props) : JSX.Element => {
+  name,
+  to,
+  inactiveColor,
+  activeColor,
+}: Props): JSX.Element => {
   const router = useRouter();
 
-  const color = router.pathname === `/${to}` ? (
-    <Text
-      pr="50px"
-      color={activeColor}
-      fontSize="2xl"
-      font="monospace"
-    >
-      {name}
-    </Text>
-  ) : (
-    <Text
-      className=""
-      pr="50px"
-      color={inactiveColor}
-      fontSize="2xl"
-      font="monospace"
-    >
-      {name}
-    </Text>
-  );
+  const color =
+    router.pathname === `/${to}` ? (
+      <Text pr="50px" color={activeColor} fontSize="2xl" font="monospace">
+        {name}
+      </Text>
+    ) : (
+      <Text
+        className=""
+        pr="50px"
+        color={inactiveColor}
+        fontSize="2xl"
+        font="monospace"
+      >
+        {name}
+      </Text>
+    );
   return (
     <>
       <LinkBox>
         <Link href={`/${to}`}>
-
-          <a
+          {/* <a
             href={`/${to}`}
-          >
-            {color}
-          </a>
-
+          > */}
+          {color}
+          {/* </a> */}
         </Link>
       </LinkBox>
     </>

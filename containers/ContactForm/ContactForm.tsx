@@ -6,13 +6,13 @@ import {
   Textarea,
 } from '@chakra-ui/react';
 import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 
 declare type Props = {
-    emphasisText: string
-}
+  emphasisText: string;
+};
 
-export const ContactForm = ({ emphasisText } : Props): JSX.Element => {
+export const ContactForm = ({ emphasisText }: Props): JSX.Element => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -37,25 +37,31 @@ export const ContactForm = ({ emphasisText } : Props): JSX.Element => {
 
   const handleSubmit = (e: React.SyntheticEvent): void => {
     e.preventDefault();
-    emailjs.send(serviceId, templateId, {
-      name,
-      email,
-      message,
-    }).then(() => {
-      setName('');
-      setEmail('');
-      setMessage('');
-    });
+    emailjs
+      .send(serviceId, templateId, {
+        name,
+        email,
+        message,
+      })
+      .then(() => {
+        setName('');
+        setEmail('');
+        setMessage('');
+      });
   };
 
   return (
-    <Flex height="70vh" bg="black" p="10" borderRadius="10px" flexDirection="column">
+    <Flex
+      height="70vh"
+      bg="black"
+      p="10"
+      borderRadius="10px"
+      flexDirection="column"
+    >
       <FormLabel color={emphasisText}>~$ ./.contact</FormLabel>
       <form id="contact" onSubmit={handleSubmit}>
         <FormControl id="name">
-          <FormLabel color={emphasisText}>
-            ~$ What is your name?
-          </FormLabel>
+          <FormLabel color={emphasisText}>~$ What is your name?</FormLabel>
           <Input
             color="white"
             borderRadius="0"
@@ -68,9 +74,7 @@ export const ContactForm = ({ emphasisText } : Props): JSX.Element => {
           />
         </FormControl>
         <FormControl id="email" pt="15px">
-          <FormLabel color={emphasisText}>
-            ~$ What is your email?
-          </FormLabel>
+          <FormLabel color={emphasisText}>~$ What is your email?</FormLabel>
           <Input
             color="white"
             borderRadius="0"

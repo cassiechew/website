@@ -11,5 +11,7 @@
     },
     "cSpell.words": [
         "Chakra"
-    ]
+    ],
+    "typescript.enablePromptUseWorkspaceTsdk": true,
+    "typescript.tsdk": "node_modules/typescript/lib"
 }

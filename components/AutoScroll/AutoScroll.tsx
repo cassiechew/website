@@ -11,12 +11,12 @@ export const AutoScroll = (): JSX.Element => {
       setChevron(
         <ChevronUpIcon
           position="fixed"
-          anchor="left"
+          textAnchor="left"
           bottom="5vh"
           right="5vw"
           h={8}
           w={8}
-        />,
+        />
       );
     } else {
       setChevron(<></>);
@@ -24,9 +24,7 @@ export const AutoScroll = (): JSX.Element => {
   });
 
   return (
-    <Flex
-      justifyContent="right"
-    >
+    <Flex justifyContent="right">
       <button
         type="button"
         onClick={() => {
