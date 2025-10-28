@@ -49,7 +49,11 @@
         "react-hooks/exhaustive-deps": "warn",
         "import/prefer-default-export": "off",
         "react/prop-types": "off",
-        "react/no-unescaped-entities": "off"
+        "react/no-unescaped-entities": "off",
+        "comma-dangle": "off",
+        "no-confusing-arrow": "warn",
+        "implicit-arrow-linebreak": "off",
+        "operator-linebreak": "off"
     },
     "settings": {
         "import/resolver": {
