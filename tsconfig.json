@@ -22,8 +22,7 @@
     "types": [
       "node"
     ],
-    "jsx": "preserve",
-    "incremental": true
+    "jsx": "preserve"
   },
   "include": [
     "next-env.d.ts",
